@@ -21,9 +21,11 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 | **Offline-First** | All data stored locally on device, no cloud dependency |
 | **Calendar View** | Visual calendar with mood indicators and quick navigation |
 | **Statistics** | Writing streaks, mood trends, and activity analysis |
-| **Search** | Full-text search and tag-based filtering |
+| **Search** | Full-text search and tag-based filtering (case-insensitive) |
 | **Random Entry** | Rediscover past entries randomly |
-| **Data Export/Import** | JSON-based backup and restore |
+| **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
+| **Daily Reminder** | Configurable daily notification to keep the writing habit |
+| **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export/import, backup reminder banner |
 
 ## Tech Stack
 
