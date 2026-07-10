@@ -23,6 +23,8 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 | **Statistics** | Writing streaks, mood trends, and activity analysis |
 | **On-Device Mood Insights** | Sentiment trends + frequent-word analysis computed 100% on device — custom JP/EN lexicon, no cloud AI, nothing ever sent |
 | **Year in Review** | A year of writing condensed into one shareable card image (entries, streak, monthly mood, top words) — diary text never included |
+| **Guided Writing Programs** | Research-based protocols with sources cited in app: Expressive Writing (Pennebaker, 15 min x 4 days) and Three Good Things (Seligman) — sessions stored separately from diary entries |
+| **Meaning-Making Words** | LIWC-inspired insight / causal word density trend, computed on device |
 | **Search** | Full-text search and tag-based filtering (case-insensitive) |
 | **Random Entry** | Rediscover past entries randomly |
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
