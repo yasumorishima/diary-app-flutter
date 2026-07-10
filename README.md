@@ -21,6 +21,8 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 | **Offline-First** | All data stored locally on device, no cloud dependency |
 | **Calendar View** | Visual calendar with mood indicators and quick navigation |
 | **Statistics** | Writing streaks, mood trends, and activity analysis |
+| **On-Device Mood Insights** | Sentiment trends + frequent-word analysis computed 100% on device — custom JP/EN lexicon, no cloud AI, nothing ever sent |
+| **Year in Review** | A year of writing condensed into one shareable card image (entries, streak, monthly mood, top words) — diary text never included |
 | **Search** | Full-text search and tag-based filtering (case-insensitive) |
 | **Random Entry** | Rediscover past entries randomly |
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
@@ -34,7 +36,9 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 | **Framework** | Flutter 3.x, Dart |
 | **State Management** | Provider |
 | **Local Storage** | Hive (NoSQL) |
-| **Monetization** | Google AdMob (Banner Ads) |
+| **Monetization** | Google AdMob (non-personalized banner ads) |
+| **Testing** | flutter_test unit tests + Android emulator integration test (E2E flow on CI) |
+| **CI/CD** | GitHub Actions (analyze + test / cloud AAB build → auto-publish to Google Play / store-listing updates via Play Developer API) |
 | **Localization** | Flutter intl (ARB files) |
 | **Architecture** | Single-codebase cross-platform |
 
@@ -75,16 +79,15 @@ The Flutter version adds offline capability, native performance, and multi-langu
 
 ## Status
 
-**Google Play:** Coming Soon (Currently in Closed Testing)
+**Google Play:** [Published](https://play.google.com/store/apps/details?id=com.diary.daily) (Available in 177 countries)
 
-<!-- After release, uncomment and update:
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.diary.daily)
--->
 
 ## Privacy
 
-- All diary data is stored locally on your device only
-- No cloud sync, no data collection
+- All diary entries are stored locally on your device only — never uploaded or synced
+- Mood insights are computed entirely on device; diary content is never collected or shared with third parties
+- Ads are served via Google AdMob (non-personalized); like most ad SDKs it collects an advertising ID and approximate (IP-based) location — see the Privacy Policy
 - [Privacy Policy](https://yasumorishima.github.io/diary-app-flutter-privacy/)
 
 ---
