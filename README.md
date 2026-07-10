@@ -75,6 +75,8 @@ This is the mobile app version of my earlier web application:
 | **Web App** | Google Apps Script | [gas-daily-diary](https://github.com/yasumorishima/gas-daily-diary) |
 | **Mobile App** | Flutter (Android/iOS) | This repository |
 
+> 🔒 Source code lives in the private repo [daily-diary](https://github.com/yasumorishima/daily-diary) — this public repository is the portfolio/showcase (README + screenshots).
+
 The Flutter version adds offline capability, native performance, and multi-language support while maintaining the same user experience philosophy.
 
 ## Status
