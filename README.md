@@ -4,6 +4,10 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 
 (Flutter製クロスプラットフォーム日記アプリ - 企画からGoogle Playリリースまで)
 
+A laid-back, playful diary you can jot in a snap.
+
+(サッと書けて、ゆるっと続く。ポップな日記アプリ)
+
 ## Screenshots
 
 <p align="center">
@@ -20,11 +24,13 @@ Cross-platform diary app built with Flutter, from concept to Google Play release
 | **Dark Mode** | Full dark mode support with system preference detection |
 | **Offline-First** | All data stored locally on device, no cloud dependency |
 | **Calendar View** | Visual calendar with mood indicators and quick navigation |
-| **Statistics** | Writing streaks, mood trends, and activity analysis |
-| **On-Device Mood Insights** | Sentiment trends + frequent-word analysis computed 100% on device — custom JP/EN lexicon, no cloud AI, nothing ever sent |
-| **Year in Review** | A year of writing condensed into one shareable card image (entries, streak, monthly mood, top words) — diary text never included |
-| **Guided Writing Programs** | Research-based protocols with sources cited in app: Expressive Writing (Pennebaker, 15 min x 4 days) and Three Good Things (Seligman) — sessions stored separately from diary entries |
-| **Meaning-Making Words** | LIWC-inspired insight / causal word density trend, computed on device |
+| **Mood Stickers** | One-tap mood stickers on the home and writing screens |
+| **Daily Prompt** | A light, optional prompt each day — dismiss it anytime, write however you like |
+| **Save Celebration** | A little confetti and streak cheer when you save — keeps it fun |
+| **Stamp Collection** | Collect reward stamps as you keep writing (entry-count & streak milestones) |
+| **Onboarding** | Quick 3-page intro on first launch, re-viewable from settings |
+| **Statistics** | Writing streaks, mood breakdown by sticker, and activity — playful, no scoring |
+| **Year in Review** | A year of writing in one shareable card (entries, streak, top words) — diary text never included |
 | **Search** | Full-text search and tag-based filtering (case-insensitive) |
 | **Random Entry** | Rediscover past entries randomly |
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
@@ -90,10 +96,11 @@ The Flutter version adds offline capability, native performance, and multi-langu
 ## Privacy
 
 - All diary entries are stored locally on your device only — never uploaded or synced
-- Mood insights are computed entirely on device; diary content is never collected or shared with third parties
+- No cloud sync; your diary content is never collected or shared with third parties
 - Ads are served via Google AdMob (non-personalized); like most ad SDKs it collects an advertising ID and approximate (IP-based) location — see the Privacy Policy
 - [Privacy Policy](https://yasumorishima.github.io/diary-app-flutter-privacy/)
 
 ---
 
 *Built with Flutter and Claude Code*
+
