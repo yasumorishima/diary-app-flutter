@@ -20,7 +20,7 @@ A laid-back, playful diary you can jot in a snap.
 
 | Feature | Description |
 |---------|-------------|
-| **5 Language Support** | 🇯🇵 Japanese, 🇺🇸 English, 🇨🇳 Chinese, 🇰🇷 Korean, 🇪🇸 Spanish |
+| **10 Language Support** | 🇯🇵 Japanese, 🇺🇸 English, 🇨🇳 Chinese, 🇰🇷 Korean, 🇪🇸 Spanish, 🇧🇷 Portuguese, 🇮🇳 Hindi, 🇮🇩 Indonesian, 🇫🇷 French, 🇩🇪 German |
 | **Dark Mode** | Full dark mode support with system preference detection |
 | **Offline-First** | All data stored locally on device, no cloud dependency |
 | **Calendar View** | Visual calendar with mood indicators and quick navigation |
@@ -58,7 +58,7 @@ This app was developed using **Claude Code** (AI-assisted development tool by An
 
 ### What Claude Code Helped With:
 - UI/UX implementation with consistent design patterns
-- Multi-language localization (5 languages, 100+ keys)
+- Multi-language localization (10 languages, 259 keys)
 - Dark mode implementation across all screens
 - Bug fixing and code quality improvements
 - Google Play Store preparation
