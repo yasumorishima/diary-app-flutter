@@ -22,7 +22,7 @@ A laid-back, playful diary you can jot in a snap.
 |---------|-------------|
 | **10 Language Support** | 🇯🇵 Japanese, 🇺🇸 English, 🇨🇳 Chinese, 🇰🇷 Korean, 🇪🇸 Spanish, 🇧🇷 Portuguese, 🇮🇳 Hindi, 🇮🇩 Indonesian, 🇫🇷 French, 🇩🇪 German |
 | **Dark Mode** | Full dark mode support with system preference detection |
-| **Offline-First** | All data stored locally on device, no cloud dependency |
+| **Offline-First** | All data stored locally on device — no account needed, works fully offline |
 | **Calendar View** | Visual calendar with mood indicators and quick navigation |
 | **Mood Stickers** | One-tap mood stickers on the home and writing screens |
 | **Daily Prompt** | A light, optional prompt each day — dismiss it anytime, write however you like |
@@ -36,6 +36,7 @@ A laid-back, playful diary you can jot in a snap.
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
 | **Daily Reminder** | Configurable daily notification to keep the writing habit |
 | **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export/import, backup reminder banner |
+| **Google Drive Backup (Optional)** | Sign in with Google to back up to your own Drive (app-private appDataFolder) — auto backup after save, restore on any device. The developer can never read it |
 
 ## Tech Stack
 
@@ -58,7 +59,7 @@ This app was developed using **Claude Code** (AI-assisted development tool by An
 
 ### What Claude Code Helped With:
 - UI/UX implementation with consistent design patterns
-- Multi-language localization (10 languages, 259 keys)
+- Multi-language localization (10 languages, 281 keys)
 - Dark mode implementation across all screens
 - Bug fixing and code quality improvements
 - Google Play Store preparation
@@ -95,8 +96,8 @@ The Flutter version adds offline capability, native performance, and multi-langu
 
 ## Privacy
 
-- All diary entries are stored locally on your device only — never uploaded or synced
-- No cloud sync; your diary content is never collected or shared with third parties
+- All diary entries are stored locally on your device by default — nothing leaves your device unless you opt in
+- Optional Google Drive backup (v1.0.27+) stores your diary only in your own Google Drive (app-private area, `drive.appdata` scope) — the developer has no server and can never read or collect your diary
 - Ads are served via Google AdMob (non-personalized); like most ad SDKs it collects an advertising ID and approximate (IP-based) location — see the Privacy Policy
 - [Privacy Policy](https://yasumorishima.github.io/diary-app-flutter-privacy/)
 
