@@ -35,7 +35,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Random Entry** | Rediscover past entries randomly |
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
 | **Daily Reminder** | Configurable daily notification to keep the writing habit |
-| **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export/import, backup reminder banner |
+| **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export via share sheet + in-app backup list (restore / delete), backup reminder banner |
 | **Google Drive Backup (Optional)** | Sign in with Google to back up to your own Drive (app-private appDataFolder) — auto backup after save, restore on any device. The developer can never read it |
 
 ## Tech Stack
