@@ -37,6 +37,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Daily Reminder** | Configurable daily notification to keep the writing habit |
 | **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export via share sheet + in-app backup list (restore / delete), backup reminder banner |
 | **Google Drive Backup (Optional)** | Sign in with Google to back up to your own Drive (app-private appDataFolder) — auto backup after save, restore on any device. The developer can never read it |
+| **Kids' Learning Site Link** | Settings links out to the developer's free learning site for kids (arithmetic / shogi / coding). Shown only when the device language is Japanese, because the site is Japanese-only |
 
 ## Tech Stack
 
