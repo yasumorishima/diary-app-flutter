@@ -33,6 +33,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Year in Review** | A year of writing in one shareable card (entries, streak, top words) — diary text never included |
 | **Search** | Full-text search and tag-based filtering (case-insensitive) |
 | **Random Entry** | Rediscover past entries randomly |
+| **Screen Reader Support** | Every tappable control is named for TalkBack, and the reading order follows the screen. Settings carries a short *how to use this with a screen reader* section. Decorative emoji are kept out of the speech, and the save celebration is announced as a live region. Known limit: the dot marking a day with an entry in the calendar cannot be exposed (the calendar package fixes each cell's label), so the month's entry list below it is the way to find those days |
 | **App Lock** | Biometric / screen-lock protection; FLAG_SECURE blocks screenshots and task-switcher thumbnails |
 | **Daily Reminder** | Configurable daily notification to keep the writing habit |
 | **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export via share sheet + in-app backup list (restore / delete), backup reminder banner |
