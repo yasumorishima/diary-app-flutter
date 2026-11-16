@@ -1,0 +1,1245 @@
+{
+  "@@locale": "ja",
+  "appTitle": "📖 連用日記",
+  "@appTitle": {
+    "description": "アプリのタイトル"
+  },
+  "appSubtitle": "毎日の記録を残そう",
+  "@appSubtitle": {
+    "description": "アプリのサブタイトル"
+  },
+  "previousDay": "前の日",
+  "@previousDay": {
+    "description": "前の日ボタン"
+  },
+  "nextDay": "次の日",
+  "@nextDay": {
+    "description": "次の日ボタン"
+  },
+  "calendar": "カレンダー",
+  "@calendar": {
+    "description": "カレンダーメニュー"
+  },
+  "writeDiary": "日記を書く",
+  "@writeDiary": {
+    "description": "日記を書くメニュー"
+  },
+  "random": "ランダム",
+  "@random": {
+    "description": "ランダムメニュー"
+  },
+  "search": "検索",
+  "@search": {
+    "description": "検索メニュー"
+  },
+  "stats": "統計",
+  "@stats": {
+    "description": "統計メニュー"
+  },
+  "settings": "設定",
+  "@settings": {
+    "description": "設定メニュー"
+  },
+  "pastToday": "過去の今日",
+  "@pastToday": {
+    "description": "過去の今日メニュー"
+  },
+  "export": "エクスポート",
+  "@export": {
+    "description": "エクスポートメニュー"
+  },
+  "tagView": "タグ別表示",
+  "@tagView": {
+    "description": "タグ別表示メニュー"
+  },
+  "date": "日付",
+  "@date": {
+    "description": "日付ラベル"
+  },
+  "selectFromCalendar": "カレンダーから選択",
+  "@selectFromCalendar": {
+    "description": "カレンダー選択ツールチップ"
+  },
+  "pastFutureDateNote": "過去や未来の日付も選択できます",
+  "@pastFutureDateNote": {
+    "description": "日付選択の補足説明"
+  },
+  "todayMood": "今日の気分",
+  "@todayMood": {
+    "description": "気分選択ラベル"
+  },
+  "moodHappy": "嬉しい",
+  "@moodHappy": {
+    "description": "気分: 嬉しい"
+  },
+  "moodSad": "悲しい",
+  "@moodSad": {
+    "description": "気分: 悲しい"
+  },
+  "moodAngry": "怒り",
+  "@moodAngry": {
+    "description": "気分: 怒り"
+  },
+  "moodSleepy": "眠い",
+  "@moodSleepy": {
+    "description": "気分: 眠い"
+  },
+  "moodThinking": "考え中",
+  "@moodThinking": {
+    "description": "気分: 考え中"
+  },
+  "moodCalm": "穏やか",
+  "@moodCalm": {
+    "description": "気分: 穏やか"
+  },
+  "moodFun": "楽しい",
+  "@moodFun": {
+    "description": "気分: 楽しい"
+  },
+  "moodAnxious": "不安",
+  "@moodAnxious": {
+    "description": "気分: 不安"
+  },
+  "diary": "日記",
+  "@diary": {
+    "description": "日記ラベル"
+  },
+  "diaryPlaceholder": "今日あったことを書いてみましょう...",
+  "@diaryPlaceholder": {
+    "description": "日記入力プレースホルダー"
+  },
+  "diaryValidationError": "日記の内容を入力してください",
+  "@diaryValidationError": {
+    "description": "日記入力バリデーションエラー"
+  },
+  "tags": "タグ",
+  "@tags": {
+    "description": "タグラベル"
+  },
+  "tagsPlaceholder": "例: 仕事, 趣味, 家族",
+  "@tagsPlaceholder": {
+    "description": "タグ入力プレースホルダー"
+  },
+  "tagsHelper": "カンマ区切りで複数入力できます",
+  "@tagsHelper": {
+    "description": "タグ入力ヘルパーテキスト"
+  },
+  "save": "保存する",
+  "@save": {
+    "description": "保存ボタン"
+  },
+  "saving": "保存中...",
+  "@saving": {
+    "description": "保存中の表示"
+  },
+  "searching": "検索中...",
+  "@searching": {
+    "description": "検索中の表示"
+  },
+  "clear": "クリア",
+  "@clear": {
+    "description": "クリアボタン"
+  },
+  "keyword": "キーワード",
+  "@keyword": {
+    "description": "キーワードタブ"
+  },
+  "tag": "タグ",
+  "@tag": {
+    "description": "タグタブ"
+  },
+  "searchDiaryPlaceholder": "日記の内容を検索...",
+  "@searchDiaryPlaceholder": {
+    "description": "日記検索プレースホルダー"
+  },
+  "searchTagPlaceholder": "タグ名を入力（例: 仕事）",
+  "@searchTagPlaceholder": {
+    "description": "タグ検索プレースホルダー"
+  },
+  "noTagsYet": "タグがまだありません",
+  "@noTagsYet": {
+    "description": "タグが未登録の表示"
+  },
+  "tagSuggestions": "タグ候補（{count}件）",
+  "@tagSuggestions": {
+    "description": "タグ候補件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchKeywordOrTag": "キーワードまたはタグで検索",
+  "@searchKeywordOrTag": {
+    "description": "検索ガイド"
+  },
+  "noDiariesFound": "該当する日記が見つかりませんでした",
+  "@noDiariesFound": {
+    "description": "検索結果なし"
+  },
+  "tryDifferentKeyword": "別のキーワードで試してみてください",
+  "@tryDifferentKeyword": {
+    "description": "検索結果なしの補足"
+  },
+  "searchResults": "検索結果（{count}件）",
+  "@searchResults": {
+    "description": "検索結果件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "searchInputRequired": "キーワードまたはタグを入力してください",
+  "@searchInputRequired": {
+    "description": "検索入力必須エラー"
+  },
+  "searchError": "エラーが発生しました: {error}",
+  "@searchError": {
+    "description": "検索エラー表示",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "statsTitle": "📊 統計",
+  "@statsTitle": {
+    "description": "統計画面タイトル"
+  },
+  "recordStats": "記録統計",
+  "@recordStats": {
+    "description": "記録統計セクション"
+  },
+  "totalDiaries": "総日記数",
+  "@totalDiaries": {
+    "description": "総日記数ラベル"
+  },
+  "consecutiveRecords": "連続記録",
+  "@consecutiveRecords": {
+    "description": "連続記録ラベル"
+  },
+  "averageLength": "平均文字数",
+  "@averageLength": {
+    "description": "平均文字数ラベル"
+  },
+  "recordRate": "記録率",
+  "@recordRate": {
+    "description": "記録率ラベル"
+  },
+  "recordPeriod": "記録期間",
+  "@recordPeriod": {
+    "description": "記録期間セクション"
+  },
+  "firstDiary": "最初の日記",
+  "@firstDiary": {
+    "description": "最初の日記ラベル"
+  },
+  "latestDiary": "最新の日記",
+  "@latestDiary": {
+    "description": "最新の日記ラベル"
+  },
+  "periodLabel": "記録期間",
+  "@periodLabel": {
+    "description": "期間ラベル"
+  },
+  "moodRecord": "気分の記録",
+  "@moodRecord": {
+    "description": "気分記録セクション"
+  },
+  "moodUnset": "未設定",
+  "@moodUnset": {
+    "description": "気分未設定"
+  },
+  "noDiariesYet": "まだ日記がありません",
+  "@noDiariesYet": {
+    "description": "日記が未登録"
+  },
+  "statsWillAppear": "日記を書き始めると統計が表示されます",
+  "@statsWillAppear": {
+    "description": "統計未表示の説明"
+  },
+  "statsLoadError": "統計の読み込みに失敗しました: {error}",
+  "@statsLoadError": {
+    "description": "統計読み込みエラー",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsTitle": "⚙️ 設定",
+  "@settingsTitle": {
+    "description": "設定画面タイトル"
+  },
+  "displaySettings": "表示設定",
+  "@displaySettings": {
+    "description": "表示設定セクション"
+  },
+  "theme": "テーマ",
+  "@theme": {
+    "description": "テーマラベル"
+  },
+  "themeLight": "ライトモード",
+  "@themeLight": {
+    "description": "ライトモード"
+  },
+  "themeLightDesc": "常に明るいテーマを使用",
+  "@themeLightDesc": {
+    "description": "ライトモード説明"
+  },
+  "themeDark": "ダークモード",
+  "@themeDark": {
+    "description": "ダークモード"
+  },
+  "themeDarkDesc": "常に暗いテーマを使用",
+  "@themeDarkDesc": {
+    "description": "ダークモード説明"
+  },
+  "themeSystem": "システム設定",
+  "@themeSystem": {
+    "description": "システム設定"
+  },
+  "themeSystemDesc": "端末の設定に従う",
+  "@themeSystemDesc": {
+    "description": "システム設定説明"
+  },
+  "dataManagement": "データ管理",
+  "@dataManagement": {
+    "description": "データ管理セクション"
+  },
+  "dataExport": "データエクスポート",
+  "@dataExport": {
+    "description": "データエクスポート"
+  },
+  "dataExportDesc": "日記をファイルに保存（機種変更・アンインストール前に）",
+  "@dataExportDesc": {
+    "description": "エクスポート説明"
+  },
+  "dataImport": "データインポート",
+  "@dataImport": {
+    "description": "データインポート"
+  },
+  "dataImportDesc": "保存したファイルから日記を復元",
+  "@dataImportDesc": {
+    "description": "インポート説明"
+  },
+  "deleteAllData": "全データ削除",
+  "@deleteAllData": {
+    "description": "全データ削除"
+  },
+  "deleteAllDataDesc": "全ての日記を削除します（取り消せません）",
+  "@deleteAllDataDesc": {
+    "description": "全データ削除説明"
+  },
+  "deviceMigration": "データのバックアップと移行",
+  "@deviceMigration": {
+    "description": "バックアップ・移行説明タイトル"
+  },
+  "dataLossWarning": "⚠ アプリをアンインストールするとデータは全て削除されます。事前にエクスポートしてください。",
+  "@dataLossWarning": {
+    "description": "アンインストール時のデータ消失警告"
+  },
+  "migrationStep1": "旧端末で「データエクスポート」",
+  "@migrationStep1": {
+    "description": "移行手順1"
+  },
+  "migrationStep1Desc": "ファイルがダウンロードされます",
+  "@migrationStep1Desc": {
+    "description": "移行手順1説明"
+  },
+  "migrationStep2": "ファイルを新端末に転送",
+  "@migrationStep2": {
+    "description": "移行手順2"
+  },
+  "migrationStep2Desc": "メール、クラウド等で転送",
+  "@migrationStep2Desc": {
+    "description": "移行手順2説明"
+  },
+  "migrationStep3": "新端末で「データインポート」",
+  "@migrationStep3": {
+    "description": "移行手順3"
+  },
+  "migrationStep3Desc": "ファイルを選択して復元完了",
+  "@migrationStep3Desc": {
+    "description": "移行手順3説明"
+  },
+  "appInfo": "アプリ情報",
+  "@appInfo": {
+    "description": "アプリ情報セクション"
+  },
+  "version": "バージョン",
+  "@version": {
+    "description": "バージョンラベル"
+  },
+  "appName": "アプリ名",
+  "@appName": {
+    "description": "アプリ名ラベル"
+  },
+  "noExportData": "エクスポートする日記がありません",
+  "@noExportData": {
+    "description": "エクスポートデータなしエラー"
+  },
+  "exportError": "エクスポートに失敗しました: {error}",
+  "@exportError": {
+    "description": "エクスポートエラー",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "importDialogTitle": "データインポート",
+  "@importDialogTitle": {
+    "description": "インポートダイアログタイトル"
+  },
+  "importError": "インポートに失敗しました: {error}",
+  "@importError": {
+    "description": "インポートエラー",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "fileReadError": "ファイルの読み込みに失敗しました",
+  "@fileReadError": {
+    "description": "ファイル読み込みエラー"
+  },
+  "noValidData": "有効なデータが見つかりませんでした",
+  "noBackupsFound": "バックアップが見つかりません",
+  "importTapToRestore": "復元するバックアップをタップしてください",
+  "@importTapToRestore": {
+    "description": "インポート一覧の操作説明"
+  },
+  "deleteBackupTitle": "バックアップを削除",
+  "@deleteBackupTitle": {
+    "description": "バックアップ削除確認タイトル"
+  },
+  "deleteBackupMessage": "{date} のバックアップを削除しますか？",
+  "@deleteBackupMessage": {
+    "description": "バックアップ削除確認メッセージ",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "@noValidData": {
+    "description": "有効データなしエラー"
+  },
+  "cancel": "キャンセル",
+  "@cancel": {
+    "description": "キャンセルボタン"
+  },
+  "import": "インポート",
+  "@import": {
+    "description": "インポートボタン"
+  },
+  "deleteConfirmTitle": "全データ削除",
+  "@deleteConfirmTitle": {
+    "description": "削除確認タイトル"
+  },
+  "deleteConfirmMessage": "全ての日記を削除します。この操作は取り消せません。\n\n本当に削除しますか？",
+  "@deleteConfirmMessage": {
+    "description": "削除確認メッセージ"
+  },
+  "delete": "削除する",
+  "@delete": {
+    "description": "削除ボタン"
+  },
+  "deleteSuccess": "全てのデータを削除しました",
+  "@deleteSuccess": {
+    "description": "削除成功メッセージ"
+  },
+  "deleteError": "削除に失敗しました: {error}",
+  "@deleteError": {
+    "description": "削除エラー",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "themeSelectTitle": "テーマ選択",
+  "@themeSelectTitle": {
+    "description": "テーマ選択ダイアログタイトル"
+  },
+  "selectYear": "年を選択",
+  "@selectYear": {
+    "description": "年選択ダイアログタイトル"
+  },
+  "thisMonthDiaries": "今月の日記 ({count}件)",
+  "@thisMonthDiaries": {
+    "description": "今月の日記数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarError": "エラーが発生しました\n{error}",
+  "@calendarError": {
+    "description": "カレンダーエラー表示",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "pastTodayNote": "日記を続けていると、過去の思い出が見られます",
+  "@pastTodayNote": {
+    "description": "過去の今日説明"
+  },
+  "edit": "編集",
+  "@edit": {
+    "description": "編集ボタン"
+  },
+  "randomNoDiary": "まだ日記がありません",
+  "@randomNoDiary": {
+    "description": "ランダム画面で日記なし"
+  },
+  "randomError": "エラーが発生しました: {error}",
+  "@randomError": {
+    "description": "ランダムエラー",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "randomTryAgain": "もう一度",
+  "@randomTryAgain": {
+    "description": "もう一度ボタン"
+  },
+  "backToHome": "ホームへ",
+  "@backToHome": {
+    "description": "ホームへ戻るボタン"
+  },
+  "startWritingDiary": "日記を書いてみましょう",
+  "@startWritingDiary": {
+    "description": "日記を書き始める誘導"
+  },
+  "saveSaved": "✅ 保存しました！",
+  "@saveSaved": {
+    "description": "保存成功メッセージ"
+  },
+  "saveError": "❌ エラーが発生しました: {error}",
+  "@saveError": {
+    "description": "保存時のエラーメッセージ",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "language": "言語",
+  "@language": {
+    "description": "言語設定項目"
+  },
+  "selectLanguage": "言語を選択",
+  "@selectLanguage": {
+    "description": "言語選択ダイアログタイトル"
+  },
+  "pastTodayTitle": "過去の今日（{monthDay}）",
+  "@pastTodayTitle": {
+    "description": "過去の今日画面タイトル",
+    "placeholders": {
+      "monthDay": {
+        "type": "String"
+      }
+    }
+  },
+  "pastTodayNoPastEntries": "{monthDay}の過去の日記はまだありません",
+  "@pastTodayNoPastEntries": {
+    "description": "過去の今日 - 日記なしメッセージ",
+    "placeholders": {
+      "monthDay": {
+        "type": "String"
+      }
+    }
+  },
+  "pastTodayKeepWriting": "日記を書き続けて、思い出を残しましょう",
+  "@pastTodayKeepWriting": {
+    "description": "過去の今日 - 継続メッセージ"
+  },
+  "searchEnterKeywordOrTag": "キーワードまたはタグを入力してください",
+  "@searchEnterKeywordOrTag": {
+    "description": "検索 - 入力促進メッセージ"
+  },
+  "searchDiaryContent": "日記の内容を検索",
+  "@searchDiaryContent": {
+    "description": "検索 - プレースホルダー"
+  },
+  "count": "件",
+  "@count": {
+    "description": "件数の単位"
+  },
+  "searchByKeywordOrTag": "キーワードまたはタグで検索",
+  "@searchByKeywordOrTag": {
+    "description": "検索 - 空状態メッセージ"
+  },
+  "searchNoResults": "該当する日記が見つかりませんでした",
+  "@searchNoResults": {
+    "description": "検索 - 結果なしメッセージ"
+  },
+  "searchTryDifferentKeyword": "別のキーワードで検索してみてください",
+  "@searchTryDifferentKeyword": {
+    "description": "検索 - 再試行メッセージ"
+  },
+  "statsRecordStats": "記録統計",
+  "@statsRecordStats": {
+    "description": "統計 - 記録統計セクション"
+  },
+  "statsTotalEntries": "合計日記数",
+  "@statsTotalEntries": {
+    "description": "統計 - 合計日記数"
+  },
+  "statsCurrentStreak": "連続記録日数",
+  "@statsCurrentStreak": {
+    "description": "統計 - 連続記録日数"
+  },
+  "days": "日",
+  "@days": {
+    "description": "日数の単位"
+  },
+  "statsAvgChars": "平均文字数",
+  "@statsAvgChars": {
+    "description": "統計 - 平均文字数"
+  },
+  "chars": "文字",
+  "@chars": {
+    "description": "文字数の単位"
+  },
+  "statsWriteRate": "記録率",
+  "@statsWriteRate": {
+    "description": "統計 - 記録率"
+  },
+  "statsPeriod": "記録期間",
+  "@statsPeriod": {
+    "description": "統計 - 記録期間"
+  },
+  "statsRecordingDays": "記録日数",
+  "@statsRecordingDays": {
+    "description": "統計 - 実際に記録した日数"
+  },
+  "statsFirstEntry": "最初の日記",
+  "@statsFirstEntry": {
+    "description": "統計 - 最初の日記"
+  },
+  "statsLatestEntry": "最新の日記",
+  "@statsLatestEntry": {
+    "description": "統計 - 最新の日記"
+  },
+  "daysCount": "日間",
+  "@daysCount": {
+    "description": "日数（期間）の単位"
+  },
+  "statsMoodRecord": "気分の記録",
+  "@statsMoodRecord": {
+    "description": "統計 - 気分の記録セクション"
+  },
+  "notSet": "未設定",
+  "@notSet": {
+    "description": "気分未設定"
+  },
+  "times": "回",
+  "@times": {
+    "description": "回数の単位"
+  },
+  "thisMonthEntries": "今月の日記（{count}件）",
+  "@thisMonthEntries": {
+    "description": "カレンダー - 今月の日記件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSuccess": "{count}件の日記をエクスポートしました",
+  "@exportSuccess": {
+    "description": "エクスポート成功メッセージ",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConfirmMessage": "{count}件の日記をインポートします。\n\nインポートしますか？",
+  "@importConfirmMessage": {
+    "description": "インポート確認メッセージ",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictMessage": "ファイル内: {total}件（新規: {newCount}件、重複: {duplicateCount}件）\n\n重複する日記をどうしますか？",
+  "@importConflictMessage": {
+    "description": "インポート重複確認メッセージ",
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "newCount": {
+        "type": "int"
+      },
+      "duplicateCount": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkipExisting": "既存を残す",
+  "@importSkipExisting": {
+    "description": "重複スキップボタン"
+  },
+  "importOverwrite": "上書き",
+  "@importOverwrite": {
+    "description": "重複上書きボタン"
+  },
+  "importSuccess": "{count}件の日記をインポートしました",
+  "@importSuccess": {
+    "description": "インポート成功メッセージ",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyPolicy": "プライバシーポリシー",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "termsOfService": "利用規約",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "urlOpenError": "URLを開けませんでした",
+  "@urlOpenError": {
+    "description": "URL起動エラーメッセージ"
+  },
+  "goToToday": "今日に戻る",
+  "@goToToday": {
+    "description": "今日に戻るボタン"
+  },
+  "reminderSection": "リマインダー",
+  "@reminderSection": {
+    "description": "設定: リマインダーセクション見出し"
+  },
+  "reminderDaily": "毎日のリマインダー",
+  "@reminderDaily": {
+    "description": "毎日のリマインダー設定"
+  },
+  "reminderDailyDesc": "毎日決まった時刻に通知します",
+  "@reminderDailyDesc": {
+    "description": "毎日のリマインダー説明"
+  },
+  "reminderTime": "通知時刻",
+  "@reminderTime": {
+    "description": "通知時刻設定"
+  },
+  "reminderNotificationTitle": "今日の日記",
+  "@reminderNotificationTitle": {
+    "description": "リマインダー通知タイトル"
+  },
+  "reminderNotificationBody": "今日の出来事を書き残しましょう",
+  "@reminderNotificationBody": {
+    "description": "リマインダー通知本文"
+  },
+  "reminderPermissionDenied": "通知が許可されていません。端末の設定から通知を許可してください",
+  "@reminderPermissionDenied": {
+    "description": "通知権限拒否メッセージ"
+  },
+  "securitySection": "セキュリティ",
+  "@securitySection": {
+    "description": "設定: セキュリティセクション見出し"
+  },
+  "appLock": "アプリロック",
+  "@appLock": {
+    "description": "アプリロック設定"
+  },
+  "appLockDesc": "起動時に生体認証または画面ロックで保護します",
+  "@appLockDesc": {
+    "description": "アプリロック説明"
+  },
+  "appLockUnavailable": "この端末では生体認証または画面ロックが設定されていません",
+  "@appLockUnavailable": {
+    "description": "アプリロック利用不可メッセージ"
+  },
+  "appLockUnlock": "ロック解除",
+  "@appLockUnlock": {
+    "description": "ロック解除ボタン"
+  },
+  "appLockReason": "日記を表示するには認証してください",
+  "@appLockReason": {
+    "description": "認証ダイアログの理由文"
+  },
+  "lastBackup": "最終バックアップ: {date}",
+  "@lastBackup": {
+    "description": "最終バックアップ日時",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "lastBackupNever": "バックアップ履歴がありません",
+  "@lastBackupNever": {
+    "description": "バックアップ未実施"
+  },
+  "backupReminderTitle": "バックアップのおすすめ",
+  "@backupReminderTitle": {
+    "description": "バックアップ促しバナータイトル"
+  },
+  "backupReminderMessage": "最後のバックアップから30日以上経過しています。データを守るためにエクスポートしましょう",
+  "@backupReminderMessage": {
+    "description": "バックアップ促しバナー本文"
+  },
+  "backupNow": "今すぐバックアップ",
+  "@backupNow": {
+    "description": "今すぐバックアップボタン"
+  },
+  "later": "あとで",
+  "@later": {
+    "description": "あとでボタン"
+  },
+  "statsEmotionTitle": "こころの動き",
+  "@statsEmotionTitle": {
+    "description": "感情トレンドカードのタイトル"
+  },
+  "statsEmotionSubtitle": "日記の言葉から端末内で自動分析（送信なし）",
+  "@statsEmotionSubtitle": {
+    "description": "感情トレンドの説明（端末内分析）"
+  },
+  "statsTopWordsTitle": "今月よく使った言葉",
+  "@statsTopWordsTitle": {
+    "description": "今月の頻出語カードのタイトル"
+  },
+  "emotionPositive": "ポジティブ",
+  "@emotionPositive": {
+    "description": "感情バーの凡例（ポジティブ側）"
+  },
+  "emotionNegative": "ネガティブ",
+  "@emotionNegative": {
+    "description": "感情バーの凡例（ネガティブ側）"
+  },
+  "yearReview": "1年の振り返り",
+  "@yearReview": {
+    "description": "1年の振り返り画面のタイトル"
+  },
+  "yearReviewEntries": "書いた日記",
+  "@yearReviewEntries": {
+    "description": "振り返り: 書いた日記数のラベル"
+  },
+  "yearReviewChars": "書いた文字数",
+  "@yearReviewChars": {
+    "description": "振り返り: 書いた文字数のラベル"
+  },
+  "yearReviewMaxStreak": "最長連続記録",
+  "@yearReviewMaxStreak": {
+    "description": "振り返り: 最長連続記録のラベル"
+  },
+  "yearReviewTopWords": "今年よく使った言葉",
+  "@yearReviewTopWords": {
+    "description": "振り返り: 今年の頻出語のラベル"
+  },
+  "yearReviewMonthlyMood": "月ごとのこころの動き",
+  "@yearReviewMonthlyMood": {
+    "description": "振り返り: 月別感情のラベル"
+  },
+  "yearReviewShare": "画像でシェア",
+  "@yearReviewShare": {
+    "description": "振り返り画像のシェアボタン"
+  },
+  "yearReviewNoData": "日記がまだありません",
+  "@yearReviewNoData": {
+    "description": "振り返り: 日記なしの表示"
+  },
+  "statsMeaningTitle": "意味づけのことば",
+  "@statsMeaningTitle": {
+    "description": "意味づけ度カードのタイトル"
+  },
+  "statsMeaningSubtitle": "「気づいた」「だから」など、気づきと理由づけの言葉の密度（100文字あたり）",
+  "@statsMeaningSubtitle": {
+    "description": "意味づけ度の説明"
+  },
+  "programs": "プログラム",
+  "@programs": {
+    "description": "ガイド付きプログラム: programs"
+  },
+  "pennebakerTitle": "筆記開示（4日間コース）",
+  "@pennebakerTitle": {
+    "description": "ガイド付きプログラム: pennebakerTitle"
+  },
+  "pennebakerDesc": "心に引っかかっている出来事について、うまく書こうとせず思うまま15分書きます。同じテーマで4日間続けます",
+  "@pennebakerDesc": {
+    "description": "ガイド付きプログラム: pennebakerDesc"
+  },
+  "pennebakerCitation": "Pennebaker & Beall (1986) 以降、200本以上の研究がある書き方です",
+  "@pennebakerCitation": {
+    "description": "ガイド付きプログラム: pennebakerCitation"
+  },
+  "tgtTitle": "3つの良いこと",
+  "@tgtTitle": {
+    "description": "ガイド付きプログラム: tgtTitle"
+  },
+  "tgtDesc": "今日あった良いことを3つと、その理由を書きます",
+  "@tgtDesc": {
+    "description": "ガイド付きプログラム: tgtDesc"
+  },
+  "tgtCitation": "Seligman ら (2005) のポジティブ心理学研究に基づく書き方です",
+  "@tgtCitation": {
+    "description": "ガイド付きプログラム: tgtCitation"
+  },
+  "programDisclaimer": "これらは研究で効果が報告されている書き方を実践するための機能であり、治療や効果を保証するものではありません",
+  "@programDisclaimer": {
+    "description": "ガイド付きプログラム: programDisclaimer"
+  },
+  "startWriting": "書きはじめる",
+  "@startWriting": {
+    "description": "ガイド付きプログラム: startWriting"
+  },
+  "continueWriting": "つづける",
+  "@continueWriting": {
+    "description": "ガイド付きプログラム: continueWriting"
+  },
+  "newCourse": "新しいテーマで始める",
+  "@newCourse": {
+    "description": "ガイド付きプログラム: newCourse"
+  },
+  "themeLabel": "書くテーマ（4日間向き合うこと）",
+  "@themeLabel": {
+    "description": "ガイド付きプログラム: themeLabel"
+  },
+  "themeHint": "例: 仕事の失敗、人間関係のもやもや",
+  "@themeHint": {
+    "description": "ガイド付きプログラム: themeHint"
+  },
+  "timerKeepWriting": "手を止めずに、思うまま書き続けましょう",
+  "@timerKeepWriting": {
+    "description": "ガイド付きプログラム: timerKeepWriting"
+  },
+  "timerDone": "15分経ちました。区切りのいいところまで書いて終えましょう",
+  "@timerDone": {
+    "description": "ガイド付きプログラム: timerDone"
+  },
+  "finishEarlyTitle": "早めに終わりますか？",
+  "@finishEarlyTitle": {
+    "description": "ガイド付きプログラム: finishEarlyTitle"
+  },
+  "finishEarlyMessage": "研究では15分書き続けることが推奨されています",
+  "@finishEarlyMessage": {
+    "description": "ガイド付きプログラム: finishEarlyMessage"
+  },
+  "finishSession": "終了して保存",
+  "@finishSession": {
+    "description": "ガイド付きプログラム: finishSession"
+  },
+  "sessionSaved": "保存しました（日記本体とは別に保存されます）",
+  "@sessionSaved": {
+    "description": "ガイド付きプログラム: sessionSaved"
+  },
+  "goodThingLabel": "良かったこと",
+  "@goodThingLabel": {
+    "description": "ガイド付きプログラム: goodThingLabel"
+  },
+  "whyLabel": "なぜ良かった？（任意）",
+  "@whyLabel": {
+    "description": "ガイド付きプログラム: whyLabel"
+  },
+  "tgtDoneToday": "今日は記入済み ✅",
+  "@tgtDoneToday": {
+    "description": "ガイド付きプログラム: tgtDoneToday"
+  },
+  "sessionHistory": "これまでの記録",
+  "@sessionHistory": {
+    "description": "ガイド付きプログラム: sessionHistory"
+  },
+  "tgtValidation": "少なくとも1つ書いてください",
+  "@tgtValidation": {
+    "description": "ガイド付きプログラム: tgtValidation"
+  },
+  "pennebakerCompleted": "4日間コース完了！おつかれさまでした",
+  "@pennebakerCompleted": {
+    "description": "ガイド付きプログラム: pennebakerCompleted"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "汎用OKボタン"
+  },
+  "themeValidation": "テーマを入力してください",
+  "@themeValidation": {
+    "description": "筆記開示テーマ未入力の検証文言"
+  },
+  "homeStreakDays": "{count}日つづいてる！",
+  "@homeStreakDays": {
+    "description": "homeStreakDays",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homePromptLabel": "きょうのお題",
+  "homePromptSkip": "使わなくてもOK",
+  "writeTodayButton": "きょうの記録",
+  "reviewTitle": "ふりかえり",
+  "stampsMenu": "スタンプ",
+  "homeCollectedStamps": "あつめたスタンプ {count}こ",
+  "@homeCollectedStamps": {
+    "description": "homeCollectedStamps",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "moodGood": "いいかんじ",
+  "moodMeh": "ふつう",
+  "writePromptHint": "お題「{prompt}」— 使わなくてもOK",
+  "@writePromptHint": {
+    "description": "writePromptHint",
+    "placeholders": {
+      "prompt": {
+        "type": "String"
+      }
+    }
+  },
+  "celebrateTitle": "かけた！やったね",
+  "celebrateStreak": "{count}日れんぞく！🔥",
+  "@celebrateStreak": {
+    "description": "celebrateStreak",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "celebrateStampGet": "スタンプ「{name}」ゲット！",
+  "@celebrateStampGet": {
+    "description": "celebrateStampGet",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "stampsTitle": "スタンプ集め",
+  "stampsCount": "{count}こ集めた",
+  "@stampsCount": {
+    "description": "stampsCount",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "stampLockedHint": "まだ ひみつ",
+  "onboardSkip": "スキップ",
+  "onboardNext": "つぎへ",
+  "onboardStart": "はじめる！",
+  "onboard1Title": "ようこそ！",
+  "onboard1Body": "サクッと書ける、ゆるい日記アプリ",
+  "onboard2Title": "気分タップ→パッと書くだけ",
+  "onboard2Body": "お題もあるよ。使わなくてもOK",
+  "onboard3Title": "つづけるとスタンプがたまる🎈",
+  "onboard3Body": "自分のペースでゆるっと続けよう",
+  "howToUse": "使い方をもう一度見る",
+  "statsMoodShare": "きぶんのわりあい",
+  "statsTopTags": "よく使ったタグ",
+  "promptQuestion1": "きょう、いちばん笑ったことは？😆",
+  "promptQuestion2": "きょう食べておいしかったものは？🍰",
+  "promptQuestion3": "いま応援してることは？📣",
+  "promptQuestion4": "きょう会えてうれしかった人は？🙌",
+  "promptQuestion5": "最近ハマってることは？🎮",
+  "promptQuestion6": "きょうの小さなラッキーは？🍀",
+  "promptQuestion7": "あした楽しみなことは？✨",
+  "promptQuestion8": "きょうの気分を一言で言うと？💬",
+  "stampNameFirst": "はじめの一歩",
+  "stampNameCount10": "10コ達成",
+  "stampNameCount30": "30コ達成",
+  "stampNameCount50": "50コ達成",
+  "stampNameCount100": "100コ達成",
+  "stampNameStreak3": "3日れんぞく",
+  "stampNameStreak7": "1週間れんぞく",
+  "stampNameStreak14": "2週間れんぞく",
+  "stampNameStreak30": "1ヶ月れんぞく",
+  "statsThisMonth": "今月",
+  "@statsThisMonth": {
+    "description": "statsThisMonth"
+  },
+  "driveSection": "Google Driveバックアップ",
+  "@driveSection":   {
+    "description": "Google Driveバックアップのセクション見出し"
+  },
+  "driveSignIn": "Googleでログイン",
+  "@driveSignIn":   {
+    "description": "Googleログインのタイル"
+  },
+  "driveSignInDesc": "日記をあなたのGoogle Driveにバックアップ。機種変更やほかの端末でも続きが書けます。データはあなたのDriveだけに保存され、開発者は見られません。",
+  "@driveSignInDesc":   {
+    "description": "ログイン導線の説明（プライバシー注記込み）"
+  },
+  "driveAutoBackup": "自動バックアップ",
+  "@driveAutoBackup":   {
+    "description": "自動バックアップのスイッチ"
+  },
+  "driveAutoBackupDesc": "日記を保存したら自動でバックアップ",
+  "@driveAutoBackupDesc":   {
+    "description": "自動バックアップの説明"
+  },
+  "driveBackupNow": "今すぐバックアップ",
+  "@driveBackupNow":   {
+    "description": "手動バックアップのタイル"
+  },
+  "driveBackupDone": "バックアップしました",
+  "@driveBackupDone":   {
+    "description": "バックアップ成功メッセージ"
+  },
+  "driveBackupFailed": "前回のバックアップに失敗しました",
+  "@driveBackupFailed":   {
+    "description": "前回バックアップ失敗の表示"
+  },
+  "driveLastBackup": "最終バックアップ: {time}",
+  "@driveLastBackup":   {
+    "description": "最終バックアップ日時の表示",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "driveBackupNever": "まだバックアップはありません",
+  "@driveBackupNever":   {
+    "description": "バックアップ未実施の表示"
+  },
+  "driveRestore": "復元",
+  "@driveRestore":   {
+    "description": "復元タイル"
+  },
+  "driveRestoreDesc": "Driveのバックアップから日記を取り込みます",
+  "@driveRestoreDesc":   {
+    "description": "復元の説明"
+  },
+  "driveRestoreConfirmTitle": "バックアップから復元",
+  "@driveRestoreConfirmTitle":   {
+    "description": "復元確認ダイアログのタイトル"
+  },
+  "driveRestoreConfirmMessage": "Driveのバックアップと端末の日記をまとめます。同じ日の日記は新しいほうが残ります。復元しますか？",
+  "@driveRestoreConfirmMessage":   {
+    "description": "復元確認ダイアログの本文"
+  },
+  "driveRestoreResult": "{added}件追加、{updated}件更新しました",
+  "@driveRestoreResult":   {
+    "description": "復元結果メッセージ",
+    "placeholders": {
+      "added": {
+        "type": "int"
+      },
+      "updated": {
+        "type": "int"
+      }
+    }
+  },
+  "driveNoBackup": "バックアップが見つかりません",
+  "@driveNoBackup":   {
+    "description": "バックアップ未検出メッセージ"
+  },
+  "driveSignOut": "ログアウト",
+  "@driveSignOut":   {
+    "description": "ログアウトのタイル"
+  },
+  "driveDeleteBackup": "バックアップを削除",
+  "@driveDeleteBackup":   {
+    "description": "バックアップ削除のタイル"
+  },
+  "driveDeleteBackupDesc": "Drive上のバックアップファイルを削除します",
+  "@driveDeleteBackupDesc":   {
+    "description": "バックアップ削除の説明"
+  },
+  "driveDeleteBackupConfirm": "Google Drive上のバックアップを削除します。端末の中の日記はそのまま残ります。削除しますか？",
+  "@driveDeleteBackupConfirm":   {
+    "description": "バックアップ削除確認ダイアログの本文"
+  },
+  "driveDeleteBackupDone": "バックアップを削除しました",
+  "@driveDeleteBackupDone":   {
+    "description": "バックアップ削除完了メッセージ"
+  },
+  "driveError": "エラー: {error}",
+  "@driveError":   {
+    "description": "Drive操作のエラーメッセージ",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "migrationDriveNote": "☁️ Google Driveバックアップでも引き継げます（Googleでログインするだけ・下の「Google Driveバックアップ」から）",
+  "@migrationDriveNote": {
+    "description": "機種変更カードのGoogle Driveバックアップ補足"
+  },
+  "unsavedChangesTitle": "書きかけの変更",
+  "unsavedChangesMessage": "保存していない変更があります。破棄して移動しますか？",
+  "discardChanges": "破棄",
+  "@unsavedChangesTitle": {
+    "description": "破棄確認タイトル"
+  },
+  "@unsavedChangesMessage": {
+    "description": "破棄確認本文"
+  },
+  "@discardChanges": {
+    "description": "破棄ボタン"
+  },
+  "kidsSite": "さんすう しょうぎ そら",
+  "@kidsSite": {
+    "description": "こども向け学習サイトへのリンク"
+  },
+  "kidsSiteDesc": "こども向けの学習サイト",
+  "@kidsSiteDesc": {
+    "description": "こども向け学習サイトの説明"
+  },
+  "a11yGuideTitle": "読み上げでつかうとき",
+  "@a11yGuideTitle": {
+    "description": "設定の「読み上げでつかうとき」の見出し"
+  },
+  "a11yGuideStart": "読み上げをするのはこのアプリではなく端末の機能です。設定 → ユーザー補助 → TalkBack を ON にしてください。端末によっては音量の大小ボタンの同時長押しでも切り替えられます。",
+  "@a11yGuideStart": {
+    "description": "読み上げは端末の機能だという説明と、その入り口"
+  },
+  "a11yGuideNames": "画面の押せるところにはすべて名前がついています。スワイプで次の要素へ移り、ダブルタップで押します。",
+  "@a11yGuideNames": {
+    "description": "このアプリでの読み上げの操作"
+  },
+  "a11yGuideCalendar": "カレンダーの日付につく「日記あり」の点だけは読み上げに出せません。同じ画面の下にある今月の日記の一覧をお使いください。",
+  "@a11yGuideCalendar": {
+    "description": "カレンダーの点だけは読み上げに出せないという断り"
+  },
+  "a11yBack": "戻る",
+  "@a11yBack": {
+    "description": "読み上げ用：戻るボタンの名前"
+  },
+  "a11yDarkMode": "ダークモードにする",
+  "@a11yDarkMode": {
+    "description": "読み上げ用：ダークモードへ切り替えるボタンの名前"
+  },
+  "a11yLightMode": "ライトモードにする",
+  "@a11yLightMode": {
+    "description": "読み上げ用：ライトモードへ切り替えるボタンの名前"
+  },
+  "a11yPrevMonth": "前の月",
+  "@a11yPrevMonth": {
+    "description": "読み上げ用：前の月へ送るボタンの名前"
+  },
+  "a11yNextMonth": "次の月",
+  "@a11yNextMonth": {
+    "description": "読み上げ用：次の月へ送るボタンの名前"
+  },
+  "a11yPickYearMonth": "年と月を選ぶ",
+  "@a11yPickYearMonth": {
+    "description": "読み上げ用：年月を選ぶボタンの名前"
+  },
+  "a11yCloseHint": "ヒントを閉じる",
+  "@a11yCloseHint": {
+    "description": "読み上げ用：ヒントを閉じるボタンの名前"
+  }
+}

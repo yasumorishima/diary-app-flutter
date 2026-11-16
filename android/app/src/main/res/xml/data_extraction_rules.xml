@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+ のバックアップ/機種変更転送ルール。
+     include/exclude を指定しない = アプリデータ全体（Hive の日記 box・SharedPreferences 含む）を
+     クラウドバックアップおよびデバイス間転送の対象にする -->
+<data-extraction-rules>
+    <cloud-backup />
+    <device-transfer />
+</data-extraction-rules>

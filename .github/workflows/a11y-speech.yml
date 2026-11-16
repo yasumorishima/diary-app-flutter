@@ -1,0 +1,74 @@
+name: A11y speech capture
+
+# 読み上げが受け取る中身（順序・文字列・liveRegion の発火）を実機で集める。
+# CI 像には TalkBack も TTS も無い（2026-08-31 実測）ので、profile ビルドにだけ入る
+# 自前の AccessibilityService を使う。既存の integration-test.yml には触らない。
+
+on:
+  push:
+    branches: [a11y-speech]
+  workflow_dispatch:
+    inputs:
+      memo:
+        description: 'why run this'
+        required: false
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      # 空きが足りないと userdata を作れずエミュレータが起動しない（2026-08-19 の既知の罠）
+      - name: Free disk space
+        run: |
+          df -h /
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/powershell \
+            /usr/local/share/chromium /usr/local/lib/node_modules \
+            /opt/hostedtoolcache/CodeQL || true
+          df -h /
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # pinned; flutter-update-check.yml opens an issue when a newer stable is out
+          flutter-version: '3.50.0'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Capture on emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disk-size: 4096M
+          disable-animations: true
+          emulator-options: -no-snapshot -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim
+          script: |
+            flutter build apk --profile
+            # 各行は別々のシェルで動くので変数を跨がせない（2026-08-31 に踏んだ）
+            rm -rf /tmp/apk && mkdir -p /tmp/apk && unzip -q -o build/app/outputs/flutter-apk/app-profile.apk -d /tmp/apk
+            echo "A11yLogger in dex: $(cat /tmp/apk/classes*.dex | strings | grep -c A11yLogger)"
+            adb install -r build/app/outputs/flutter-apk/app-profile.apk
+            # 画面を動かすのは flutter drive（uiautomator は他の a11y サービスを止めるので使えない）
+            python3 scripts/a11y_speech_capture.py

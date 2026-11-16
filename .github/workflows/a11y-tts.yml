@@ -1,0 +1,81 @@
+name: A11y TTS measure
+
+# 読み上げに渡す文字を、端末の TTS に実際に読ませて測る。
+# ⚠️ TalkBack はどの像にも入っていない（2026-09-01 実測）ので、これは
+# 「読み上げソフトが喋る音」ではなく「その文字を TTS に読ませた音」。
+# 像は google_apis_playstore（google_apis には TTS が無い）。
+
+on:
+  # 🔴 ブランチ名で縛ると、マージしてブランチを消した時点で自動実行の口が
+  # 無くなり、ゲートとして死ぬ。読ませる文言か測る仕組みが変わったら走らせる
+  # （既存の integration-test.yml と同じ流儀）。
+  pull_request:
+    paths:
+      - 'lib/l10n/**'
+      - 'android/app/src/profile/kotlin/com/diary/daily/TtsProbe.kt'
+      - 'scripts/a11y_tts_measure.py'
+      - '.github/workflows/a11y-tts.yml'
+  workflow_dispatch:
+    inputs:
+      memo:
+        description: 'why run this'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Free disk space
+        run: |
+          df -h /
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/powershell \
+            /usr/local/share/chromium /usr/local/lib/node_modules \
+            /opt/hostedtoolcache/CodeQL || true
+          df -h /
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # pinned; flutter-update-check.yml opens an issue when a newer stable is out
+          flutter-version: '3.50.0'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Measure on emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis_playstore
+          profile: pixel_6
+          disk-size: 4096M
+          disable-animations: true
+          emulator-options: -no-snapshot -no-window -gpu swiftshader_indirect -no-boot-anim
+          script: |
+            adb shell pm list packages | grep -i tts || echo "NO_TTS_ENGINE"
+            flutter build apk --profile
+            adb install -r build/app/outputs/flutter-apk/app-profile.apk
+            python3 scripts/a11y_tts_measure.py ja

@@ -1,0 +1,427 @@
+{
+  "@@locale": "en",
+  "appTitle": "📖 Daily Diary",
+  "appSubtitle": "Record your daily life",
+  "previousDay": "Previous",
+  "nextDay": "Next",
+  "calendar": "Calendar",
+  "writeDiary": "Write",
+  "random": "Random",
+  "search": "Search",
+  "stats": "Stats",
+  "settings": "Settings",
+  "pastToday": "Past Today",
+  "export": "Export",
+  "tagView": "Tags",
+  "date": "Date",
+  "selectFromCalendar": "Select from calendar",
+  "pastFutureDateNote": "You can select past or future dates",
+  "todayMood": "Today's Mood",
+  "moodHappy": "Happy",
+  "moodSad": "Sad",
+  "moodAngry": "Angry",
+  "moodSleepy": "Sleepy",
+  "moodThinking": "Thinking",
+  "moodCalm": "Calm",
+  "moodFun": "Fun",
+  "moodAnxious": "Anxious",
+  "diary": "Diary",
+  "diaryPlaceholder": "Write about your day...",
+  "diaryValidationError": "Please enter diary content",
+  "tags": "Tags",
+  "tagsPlaceholder": "e.g. work, hobby, family",
+  "tagsHelper": "Separate multiple tags with commas",
+  "save": "Save",
+  "saving": "Saving...",
+  "searching": "Searching...",
+  "clear": "Clear",
+  "keyword": "Keyword",
+  "tag": "Tag",
+  "searchDiaryPlaceholder": "Search diary content...",
+  "searchTagPlaceholder": "Enter tag name (e.g. work)",
+  "noTagsYet": "No tags yet",
+  "tagSuggestions": "Tag Suggestions ({count})",
+  "searchKeywordOrTag": "Search by keyword or tag",
+  "noDiariesFound": "No diaries found",
+  "tryDifferentKeyword": "Try a different keyword",
+  "searchResults": "Search Results ({count})",
+  "searchInputRequired": "Please enter a keyword or tag",
+  "searchError": "An error occurred: {error}",
+  "statsTitle": "📊 Statistics",
+  "recordStats": "Record Statistics",
+  "totalDiaries": "Total Diaries",
+  "consecutiveRecords": "Streak",
+  "averageLength": "Avg. Length",
+  "recordRate": "Record Rate",
+  "recordPeriod": "Period",
+  "firstDiary": "First Entry",
+  "latestDiary": "Latest Entry",
+  "periodLabel": "Period",
+  "moodRecord": "Mood Record",
+  "moodUnset": "Not set",
+  "noDiariesYet": "No diaries yet",
+  "statsWillAppear": "Statistics will appear once you start writing",
+  "statsLoadError": "Failed to load statistics: {error}",
+  "settingsTitle": "⚙️ Settings",
+  "displaySettings": "Display",
+  "theme": "Theme",
+  "themeLight": "Light Mode",
+  "themeLightDesc": "Always use light theme",
+  "themeDark": "Dark Mode",
+  "themeDarkDesc": "Always use dark theme",
+  "themeSystem": "System",
+  "themeSystemDesc": "Follow device settings",
+  "dataManagement": "Data Management",
+  "dataExport": "Export Data",
+  "dataExportDesc": "Save diaries to file (before migration or uninstall)",
+  "dataImport": "Import Data",
+  "dataImportDesc": "Restore diaries from saved file",
+  "deleteAllData": "Delete All Data",
+  "deleteAllDataDesc": "Delete all diaries (cannot be undone)",
+  "deviceMigration": "Backup & Migration Guide",
+  "dataLossWarning": "⚠ Uninstalling the app will delete all data. Please export your data beforehand.",
+  "migrationStep1": "Export data on old device",
+  "migrationStep1Desc": "File will be downloaded",
+  "migrationStep2": "Transfer file to new device",
+  "migrationStep2Desc": "Via email, cloud storage, etc.",
+  "migrationStep3": "Import data on new device",
+  "migrationStep3Desc": "Select file to complete restoration",
+  "appInfo": "App Info",
+  "version": "Version",
+  "appName": "App Name",
+  "noExportData": "No diaries to export",
+  "exportError": "Export failed: {error}",
+  "importDialogTitle": "Import Data",
+  "importError": "Import failed: {error}",
+  "fileReadError": "Failed to read file",
+  "noValidData": "No valid data found",
+  "noBackupsFound": "No backups found",
+  "importTapToRestore": "Tap a backup to restore it",
+  "deleteBackupTitle": "Delete backup",
+  "deleteBackupMessage": "Delete the backup from {date}?",
+  "cancel": "Cancel",
+  "import": "Import",
+  "deleteConfirmTitle": "Delete All Data",
+  "deleteConfirmMessage": "All diaries will be deleted. This cannot be undone.\n\nAre you sure?",
+  "delete": "Delete",
+  "deleteSuccess": "All data has been deleted",
+  "deleteError": "Delete failed: {error}",
+  "themeSelectTitle": "Select Theme",
+  "selectYear": "Select Year",
+  "thisMonthDiaries": "This Month ({count})",
+  "calendarError": "An error occurred\n{error}",
+  "pastTodayNote": "Keep writing to see past memories",
+  "edit": "Edit",
+  "randomNoDiary": "No diaries yet",
+  "randomError": "An error occurred: {error}",
+  "randomTryAgain": "Try Again",
+  "backToHome": "Home",
+  "startWritingDiary": "Start writing your diary",
+  "saveSaved": "✅ Saved!",
+  "saveError": "❌ An error occurred: {error}",
+  "language": "Language",
+  "selectLanguage": "Select Language",
+  "pastTodayTitle": "Past Today ({monthDay})",
+  "pastTodayNoPastEntries": "No past entries on {monthDay}",
+  "pastTodayKeepWriting": "Keep writing to build memories",
+  "searchEnterKeywordOrTag": "Enter keyword or tag",
+  "searchDiaryContent": "Search diary content",
+  "count": " entries",
+  "searchByKeywordOrTag": "Search by keyword or tag",
+  "searchNoResults": "No diaries found",
+  "searchTryDifferentKeyword": "Try a different keyword",
+  "@searchResults": {
+    "description": "Search results count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@tagSuggestions": {
+    "description": "Tag suggestions count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsRecordStats": "Record Statistics",
+  "statsTotalEntries": "Total Entries",
+  "statsCurrentStreak": "Current Streak",
+  "days": " days",
+  "statsAvgChars": "Average Length",
+  "chars": " chars",
+  "statsWriteRate": "Record Rate",
+  "statsPeriod": "Period",
+  "statsRecordingDays": "Days Recorded",
+  "statsFirstEntry": "First Entry",
+  "statsLatestEntry": "Latest Entry",
+  "daysCount": " days",
+  "statsMoodRecord": "Mood Record",
+  "notSet": "Not Set",
+  "times": " times",
+  "thisMonthEntries": "This Month's Entries ({count})",
+  "@thisMonthEntries": {
+    "description": "This month's entry count",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSuccess": "Exported {count} diaries",
+  "@exportSuccess": {
+    "description": "Export success message",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConfirmMessage": "{count, plural, =1{1 diary will be imported.} other{{count} diaries will be imported.}}\n\nProceed?",
+  "@importConfirmMessage": {
+    "description": "Import confirmation message",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictMessage": "File contains: {total} entries (New: {newCount}, Duplicates: {duplicateCount})\n\nWhat would you like to do with duplicate entries?",
+  "importSkipExisting": "Keep existing",
+  "importOverwrite": "Overwrite",
+  "importSuccess": "Imported {count} diaries",
+  "@importSuccess": {
+    "description": "Import success message",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Privacy Policy"
+  },
+  "termsOfService": "Terms of Service",
+  "@termsOfService": {
+    "description": "Terms of Service"
+  },
+  "urlOpenError": "Could not open URL",
+  "@urlOpenError": {
+    "description": "URL launch error message"
+  },
+  "goToToday": "Go to Today",
+  "@goToToday": {
+    "description": "Go to today button"
+  },
+  "reminderSection": "Reminder",
+  "@reminderSection": {
+    "description": "設定: リマインダーセクション見出し"
+  },
+  "reminderDaily": "Daily reminder",
+  "@reminderDaily": {
+    "description": "毎日のリマインダー設定"
+  },
+  "reminderDailyDesc": "Get a notification at a set time every day",
+  "@reminderDailyDesc": {
+    "description": "毎日のリマインダー説明"
+  },
+  "reminderTime": "Notification time",
+  "@reminderTime": {
+    "description": "通知時刻設定"
+  },
+  "reminderNotificationTitle": "Today's diary",
+  "@reminderNotificationTitle": {
+    "description": "リマインダー通知タイトル"
+  },
+  "reminderNotificationBody": "Take a moment to write about your day",
+  "@reminderNotificationBody": {
+    "description": "リマインダー通知本文"
+  },
+  "reminderPermissionDenied": "Notifications are not allowed. Please enable them in system settings",
+  "@reminderPermissionDenied": {
+    "description": "通知権限拒否メッセージ"
+  },
+  "securitySection": "Security",
+  "@securitySection": {
+    "description": "設定: セキュリティセクション見出し"
+  },
+  "appLock": "App lock",
+  "@appLock": {
+    "description": "アプリロック設定"
+  },
+  "appLockDesc": "Protect the app with biometrics or your screen lock",
+  "@appLockDesc": {
+    "description": "アプリロック説明"
+  },
+  "appLockUnavailable": "Biometrics or screen lock is not set up on this device",
+  "@appLockUnavailable": {
+    "description": "アプリロック利用不可メッセージ"
+  },
+  "appLockUnlock": "Unlock",
+  "@appLockUnlock": {
+    "description": "ロック解除ボタン"
+  },
+  "appLockReason": "Authenticate to view your diary",
+  "@appLockReason": {
+    "description": "認証ダイアログの理由文"
+  },
+  "lastBackup": "Last backup: {date}",
+  "@lastBackup": {
+    "description": "最終バックアップ日時",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "lastBackupNever": "No backup yet",
+  "@lastBackupNever": {
+    "description": "バックアップ未実施"
+  },
+  "backupReminderTitle": "Backup recommended",
+  "@backupReminderTitle": {
+    "description": "バックアップ促しバナータイトル"
+  },
+  "backupReminderMessage": "It's been over 30 days since your last backup. Export your diary to keep it safe",
+  "@backupReminderMessage": {
+    "description": "バックアップ促しバナー本文"
+  },
+  "backupNow": "Back up now",
+  "@backupNow": {
+    "description": "今すぐバックアップボタン"
+  },
+  "later": "Later",
+  "@later": {
+    "description": "あとでボタン"
+  },
+  "statsEmotionTitle": "Mood insights",
+  "statsEmotionSubtitle": "Analyzed on your device from your words (nothing is sent)",
+  "statsTopWordsTitle": "Frequent words this month",
+  "emotionPositive": "Positive",
+  "emotionNegative": "Negative",
+  "yearReview": "Year in Review",
+  "yearReviewEntries": "Entries written",
+  "yearReviewChars": "Characters written",
+  "yearReviewMaxStreak": "Longest streak",
+  "yearReviewTopWords": "Frequent words this year",
+  "yearReviewMonthlyMood": "Monthly mood",
+  "yearReviewShare": "Share as image",
+  "yearReviewNoData": "No diary entries yet",
+  "statsMeaningTitle": "Meaning-making words",
+  "statsMeaningSubtitle": "Density of insight and reasoning words per 100 characters",
+  "programs": "Programs",
+  "pennebakerTitle": "Expressive Writing (4-day course)",
+  "pennebakerDesc": "Write for 15 minutes about something weighing on your mind, without editing. Continue the same topic for 4 days",
+  "pennebakerCitation": "Based on Pennebaker & Beall (1986) and 200+ subsequent studies",
+  "tgtTitle": "Three Good Things",
+  "tgtDesc": "Write three things that went well today, and why",
+  "tgtCitation": "Based on positive psychology research by Seligman et al. (2005)",
+  "programDisclaimer": "These features help you practice writing methods studied in research. They are not medical treatment and no effects are guaranteed",
+  "startWriting": "Start writing",
+  "continueWriting": "Continue",
+  "newCourse": "Start a new topic",
+  "themeLabel": "Your topic for these 4 days",
+  "themeHint": "e.g. a conflict, a loss, something on your mind",
+  "timerKeepWriting": "Keep writing without stopping to edit",
+  "timerDone": "15 minutes are up — finish your thought and wrap up",
+  "finishEarlyTitle": "Finish early?",
+  "finishEarlyMessage": "Research protocols recommend writing for the full 15 minutes",
+  "finishSession": "Finish and save",
+  "sessionSaved": "Saved (kept separate from your diary entries)",
+  "goodThingLabel": "Good thing",
+  "whyLabel": "Why was it good? (optional)",
+  "tgtDoneToday": "Done for today ✅",
+  "sessionHistory": "History",
+  "tgtValidation": "Write at least one",
+  "pennebakerCompleted": "4-day course complete — well done!",
+  "ok": "OK",
+  "themeValidation": "Please enter your topic",
+  "homeStreakDays": "{count, plural, =1{1 day in a row!} other{{count} days in a row!}}",
+  "homePromptLabel": "Today's prompt",
+  "homePromptSkip": "Skip if you like",
+  "writeTodayButton": "Write today",
+  "reviewTitle": "Look back",
+  "stampsMenu": "Stamps",
+  "homeCollectedStamps": "{count, plural, =1{1 stamp collected} other{{count} stamps collected}}",
+  "moodGood": "Good",
+  "moodMeh": "Meh",
+  "writePromptHint": "Prompt: {prompt} — skip if you like",
+  "celebrateTitle": "You did it!",
+  "celebrateStreak": "{count}-day streak! 🔥",
+  "celebrateStampGet": "Got the {name} stamp!",
+  "stampsTitle": "Stamp collection",
+  "stampsCount": "{count} collected",
+  "stampLockedHint": "Still a secret",
+  "onboardSkip": "Skip",
+  "onboardNext": "Next",
+  "onboardStart": "Start!",
+  "onboard1Title": "Welcome!",
+  "onboard1Body": "A laid-back diary you can jot in a snap",
+  "onboard2Title": "Tap a mood, then jot it down",
+  "onboard2Body": "There are prompts too — skip if you like",
+  "onboard3Title": "Keep it up to collect stamps 🎈",
+  "onboard3Body": "Go at your own easy pace",
+  "howToUse": "See how it works again",
+  "statsMoodShare": "Mood mix",
+  "statsTopTags": "Top tags",
+  "promptQuestion1": "What made you laugh most today? 😆",
+  "promptQuestion2": "Best thing you ate today? 🍰",
+  "promptQuestion3": "What are you rooting for right now? 📣",
+  "promptQuestion4": "Who made your day today? 🙌",
+  "promptQuestion5": "What are you into lately? 🎮",
+  "promptQuestion6": "Any small luck today? 🍀",
+  "promptQuestion7": "Anything you look forward to tomorrow? ✨",
+  "promptQuestion8": "Sum up today in one word? 💬",
+  "stampNameFirst": "First step",
+  "stampNameCount10": "10 entries",
+  "stampNameCount30": "30 entries",
+  "stampNameCount50": "50 entries",
+  "stampNameCount100": "100 entries",
+  "stampNameStreak3": "3-day streak",
+  "stampNameStreak7": "1-week streak",
+  "stampNameStreak14": "2-week streak",
+  "stampNameStreak30": "1-month streak",
+  "statsThisMonth": "This month",
+  "driveSection": "Google Drive Backup",
+  "driveSignIn": "Sign in with Google",
+  "driveSignInDesc": "Back up your diary to your own Google Drive and keep writing on any device. Your data stays in your Drive only — the developer can't see it.",
+  "driveAutoBackup": "Auto backup",
+  "driveAutoBackupDesc": "Back up automatically after you save a diary entry",
+  "driveBackupNow": "Back up now",
+  "driveBackupDone": "Backup complete",
+  "driveBackupFailed": "Last backup failed",
+  "driveLastBackup": "Last backup: {time}",
+  "driveBackupNever": "No backup yet",
+  "driveRestore": "Restore",
+  "driveRestoreDesc": "Bring your diary back from your Drive backup",
+  "driveRestoreConfirmTitle": "Restore from backup",
+  "driveRestoreConfirmMessage": "This merges your Drive backup with the diary on this device. For the same day, the newer one wins. Restore now?",
+  "driveRestoreResult": "Added {added}, updated {updated}",
+  "driveNoBackup": "No backup found",
+  "driveSignOut": "Sign out",
+  "driveDeleteBackup": "Delete backup",
+  "driveDeleteBackupDesc": "Delete the backup file from your Drive",
+  "driveDeleteBackupConfirm": "This deletes the backup on your Google Drive. The diary on this device stays. Delete it?",
+  "driveDeleteBackupDone": "Backup deleted",
+  "driveError": "Error: {error}",
+  "migrationDriveNote": "☁️ You can also migrate with Google Drive backup — just sign in with Google (see the Google Drive backup section below)",
+  "unsavedChangesTitle": "Unsaved changes",
+  "unsavedChangesMessage": "You have unsaved changes. Discard them and move on?",
+  "discardChanges": "Discard",
+  "kidsSite": "Math, Shogi & Stargazing",
+  "kidsSiteDesc": "A free learning site for kids (in Japanese)",
+  "a11yGuideTitle": "Using a screen reader",
+  "a11yGuideStart": "The reading aloud comes from your device, not from this app. Turn on TalkBack in Settings > Accessibility. On many devices you can also hold both volume keys.",
+  "a11yGuideNames": "Everything you can tap has a name. Swipe to move to the next item and double-tap to activate it.",
+  "a11yGuideCalendar": "The dot that marks a day with an entry in the calendar cannot be read aloud. Use the list of this month's entries below the calendar instead.",
+  "a11yBack": "Back",
+  "a11yDarkMode": "Switch to dark mode",
+  "a11yLightMode": "Switch to light mode",
+  "a11yPrevMonth": "Previous month",
+  "a11yNextMonth": "Next month",
+  "a11yPickYearMonth": "Choose year and month",
+  "a11yCloseHint": "Close the hint"
+}

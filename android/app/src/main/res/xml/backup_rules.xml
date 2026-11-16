@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 11 以下の Auto Backup ルール。
+     include/exclude を指定しない = アプリデータ全体（Hive の日記 box・SharedPreferences 含む）を
+     Google One 経由のクラウドバックアップ対象にする -->
+<full-backup-content />

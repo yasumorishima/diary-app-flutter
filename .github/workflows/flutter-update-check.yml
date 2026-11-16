@@ -1,0 +1,142 @@
+name: Flutter update check
+
+# Flutter の版は各 workflow の flutter-version: 'X.Y.Z' で固定している。
+# 週に 1 回、最新の stable を調べ、固定より新しければその版で
+# pub get / analyze / テスト / debug APK のビルドを試して、結果を版ごとに 1 つの issue に書く。
+# 版を上げるのは結果を見てから決める（2026-11-15 に 3.50.0 が出て analyze が落ち、
+# Gradle 9.3.1 以上も要ると分かったのは CI が赤くなってからだった）。
+# PR ではなく issue にするのは、この repo では GITHUB_TOKEN が PR を作れず
+# （can_approve_pull_request_reviews=false）、workflow ファイルも書き換えられないため。
+
+on:
+  schedule:
+    - cron: '23 1 * * 1'
+  workflow_dispatch:
+    inputs:
+      memo:
+        description: 'run intent memo'
+        required: false
+
+permissions:
+  contents: read
+  issues: write
+
+# 定期と手動が重なって同じ版の issue を 2 つ作らないように
+concurrency:
+  group: flutter-update-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Compare the pin with the newest stable
+        id: ver
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          pins=$(grep -rhoP "flutter-version: '\K[0-9][0-9.]*(?=')" .github/workflows | sort -u || true)
+          if [ -z "$pins" ]; then echo "::error::workflow に flutter-version: 'X.Y.Z' の固定が見つからない"; exit 1; fi
+          if [ "$(printf '%s\n' "$pins" | grep -c .)" -ne 1 ]; then
+            echo "::error::workflow ごとに固定の版が違う: $(echo $pins)"; exit 1
+          fi
+          pin=$pins
+          latest=$(curl -fsS https://storage.googleapis.com/flutter_infra_release/releases/releases_linux.json \
+            | jq -r '.current_release.stable as $h | [.releases[] | select(.hash == $h and .channel == "stable") | .version][0] // empty')
+          # 外から取った値なので形を確かめてから使う（subosito は inputs を自分の run: に埋め込み、
+          # 改行があれば GITHUB_OUTPUT に偽の行を足せてしまう）
+          if ! [[ "$latest" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then echo "::error::最新の stable の版の形が想定外: '$latest'"; exit 1; fi
+          echo "固定 $pin / 最新の stable $latest"
+          title="Flutter $latest が出た（固定は $pin）"
+          {
+            echo "pin=$pin"
+            echo "latest=$latest"
+            echo "title=$title"
+          } >> "$GITHUB_OUTPUT"
+          newer=$(printf '%s\n%s\n' "$pin" "$latest" | sort -V | tail -1)
+          if [ "$latest" = "$pin" ] || [ "$newer" = "$pin" ]; then
+            echo "固定が最新＝何もしない"; echo "todo=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # 検索語に頼らず全件の題名で照合する（日本語の検索が取りこぼすと毎週作り直してしまう）
+          n=$(gh issue list --repo "$GITHUB_REPOSITORY" --state all --limit 1000 --json title \
+                --jq "[.[] | select(.title | startswith(\"Flutter $latest が出た\"))] | length")
+          if [ "$n" -gt 0 ]; then
+            echo "Flutter $latest の issue は既にある＝何もしない"; echo "todo=no" >> "$GITHUB_OUTPUT"
+          else
+            echo "todo=yes" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Java 21
+        if: steps.ver.outputs.todo == 'yes'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Set up the newest Flutter
+        if: steps.ver.outputs.todo == 'yes'
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          flutter-version: ${{ steps.ver.outputs.latest }}
+
+      - name: Try it (never fails the job)
+        if: steps.ver.outputs.todo == 'yes'
+        run: |
+          set +e
+          flutter --version
+          try() { name=$1; shift; "$@" > "$RUNNER_TEMP/$name.log" 2>&1; echo $? > "$RUNNER_TEMP/$name.rc"; }
+          try pubget flutter pub get
+          # 版を上げる PR では pubspec.lock も変わる（SDK が固定している版が動く）。
+          # flutter-ci は lock の食い違いで落ちるので、上げるときに使う差分を残す
+          git diff pubspec.lock > "$RUNNER_TEMP/lock.diff"
+          try analyze flutter analyze
+          try test flutter test
+          try build flutter build apk --debug
+          exit 0
+
+      - name: Write the issue
+        if: steps.ver.outputs.todo == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PIN: ${{ steps.ver.outputs.pin }}
+          LATEST: ${{ steps.ver.outputs.latest }}
+          TITLE: ${{ steps.ver.outputs.title }}
+        run: |
+          body="$RUNNER_TEMP/body.md"
+          {
+            echo "最新の stable が Flutter $LATEST になった。workflow の固定は $PIN。"
+            echo "この版で master（${GITHUB_SHA::7}）を試した結果:"
+            echo
+            for s in pubget:"flutter pub get" analyze:"flutter analyze" test:"flutter test" build:"flutter build apk --debug"; do
+              key=${s%%:*}; label=${s#*:}
+              rc=$(cat "$RUNNER_TEMP/$key.rc" 2>/dev/null || echo '?')
+              if [ "$rc" = 0 ]; then mark='✅'; else mark="❌ (exit $rc)"; fi
+              echo "- \`$label\`: $mark"
+            done
+            echo
+            for key in pubget analyze test build; do
+              echo "<details><summary>$key の最後の 40 行</summary>"
+              echo
+              echo '```'
+              tail -n 40 "$RUNNER_TEMP/$key.log" 2>/dev/null
+              echo '```'
+              echo '</details>'
+            done
+            echo "<details><summary>この版の flutter pub get で pubspec.lock が変わる差分（$(grep -c '^[-+][^-+]' "$RUNNER_TEMP/lock.diff" 2>/dev/null || echo 0) 行）</summary>"
+            echo
+            echo '```diff'
+            head -c 40000 "$RUNNER_TEMP/lock.diff" 2>/dev/null
+            echo '```'
+            echo '</details>'
+            echo
+            echo "全部 ✅ なら、5 つの workflow の \`flutter-version: '$PIN'\` を \`'$LATEST'\` にし、上の pubspec.lock の差分も入れた PR を作って CI を通す。"
+            echo "❌ があれば、直すまで固定のまま。この版の issue は 1 回だけ作る（閉じても作り直さない）。"
+            echo
+            echo "run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          } > "$body"
+          gh issue create --repo "$GITHUB_REPOSITORY" --title "$TITLE" --body-file "$body"

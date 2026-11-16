@@ -1,0 +1,41 @@
+name: Flutter CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # pinned; flutter-update-check.yml opens an issue when a newer stable is out
+          flutter-version: '3.50.0'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # pubspec.yaml を変えたのに pubspec.lock を更新し忘れると、ビルドのたびに
+      # 解決し直した版で作ることになる。差分を出して落とす。
+      - name: Check pubspec.lock is up to date
+        run: git diff --exit-code pubspec.lock
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Test
+        run: flutter test

@@ -1,0 +1,427 @@
+{
+  "@@locale": "zh",
+  "appTitle": "📖 每日日记",
+  "appSubtitle": "记录每一天",
+  "previousDay": "前一天",
+  "nextDay": "后一天",
+  "calendar": "日历",
+  "writeDiary": "写日记",
+  "random": "随机",
+  "search": "搜索",
+  "stats": "统计",
+  "settings": "设置",
+  "pastToday": "往年今日",
+  "export": "导出",
+  "tagView": "标签",
+  "date": "日期",
+  "selectFromCalendar": "从日历选择",
+  "pastFutureDateNote": "可以选择过去或未来的日期",
+  "todayMood": "今天的心情",
+  "moodHappy": "开心",
+  "moodSad": "难过",
+  "moodAngry": "生气",
+  "moodSleepy": "困倦",
+  "moodThinking": "思考中",
+  "moodCalm": "平静",
+  "moodFun": "快乐",
+  "moodAnxious": "焦虑",
+  "diary": "日记",
+  "diaryPlaceholder": "写下今天发生的事...",
+  "diaryValidationError": "请输入日记内容",
+  "tags": "标签",
+  "tagsPlaceholder": "例如：工作，爱好，家人",
+  "tagsHelper": "用逗号分隔多个标签",
+  "save": "保存",
+  "saving": "保存中...",
+  "searching": "搜索中...",
+  "clear": "清除",
+  "keyword": "关键词",
+  "tag": "标签",
+  "searchDiaryPlaceholder": "搜索日记内容...",
+  "searchTagPlaceholder": "输入标签名（例如：工作）",
+  "noTagsYet": "还没有标签",
+  "tagSuggestions": "标签建议（{count}条）",
+  "searchKeywordOrTag": "按关键词或标签搜索",
+  "noDiariesFound": "未找到日记",
+  "tryDifferentKeyword": "尝试其他关键词",
+  "searchResults": "搜索结果（{count}条）",
+  "searchInputRequired": "请输入关键词或标签",
+  "searchError": "发生错误：{error}",
+  "statsTitle": "📊 统计",
+  "recordStats": "记录统计",
+  "totalDiaries": "总日记数",
+  "consecutiveRecords": "连续记录",
+  "averageLength": "平均字数",
+  "recordRate": "记录率",
+  "recordPeriod": "记录期间",
+  "firstDiary": "第一篇日记",
+  "latestDiary": "最新日记",
+  "periodLabel": "记录期间",
+  "moodRecord": "心情记录",
+  "moodUnset": "未设置",
+  "noDiariesYet": "还没有日记",
+  "statsWillAppear": "开始写日记后将显示统计信息",
+  "statsLoadError": "加载统计失败：{error}",
+  "settingsTitle": "⚙️ 设置",
+  "displaySettings": "显示设置",
+  "theme": "主题",
+  "themeLight": "浅色模式",
+  "themeLightDesc": "始终使用浅色主题",
+  "themeDark": "深色模式",
+  "themeDarkDesc": "始终使用深色主题",
+  "themeSystem": "跟随系统",
+  "themeSystemDesc": "跟随设备设置",
+  "dataManagement": "数据管理",
+  "dataExport": "导出数据",
+  "dataExportDesc": "将日记保存到文件（设备迁移或卸载前）",
+  "dataImport": "导入数据",
+  "dataImportDesc": "从保存的文件恢复日记",
+  "deleteAllData": "删除所有数据",
+  "deleteAllDataDesc": "删除所有日记（无法撤销）",
+  "deviceMigration": "备份与迁移指南",
+  "dataLossWarning": "⚠ 卸载应用将删除所有数据。请提前导出您的数据。",
+  "migrationStep1": "在旧设备上导出数据",
+  "migrationStep1Desc": "文件将被下载",
+  "migrationStep2": "将文件传输到新设备",
+  "migrationStep2Desc": "通过电子邮件、云存储等",
+  "migrationStep3": "在新设备上导入数据",
+  "migrationStep3Desc": "选择文件完成恢复",
+  "appInfo": "应用信息",
+  "version": "版本",
+  "appName": "应用名称",
+  "noExportData": "没有可导出的日记",
+  "exportError": "导出失败：{error}",
+  "importDialogTitle": "导入数据",
+  "importError": "导入失败：{error}",
+  "fileReadError": "读取文件失败",
+  "noValidData": "未找到有效数据",
+  "noBackupsFound": "未找到备份",
+  "importTapToRestore": "点击要恢复的备份",
+  "deleteBackupTitle": "删除备份",
+  "deleteBackupMessage": "要删除 {date} 的备份吗？",
+  "cancel": "取消",
+  "import": "导入",
+  "deleteConfirmTitle": "删除所有数据",
+  "deleteConfirmMessage": "所有日记将被删除。此操作无法撤销。\n\n确定要删除吗？",
+  "delete": "删除",
+  "deleteSuccess": "所有数据已删除",
+  "deleteError": "删除失败：{error}",
+  "themeSelectTitle": "选择主题",
+  "selectYear": "选择年份",
+  "thisMonthDiaries": "本月（{count}篇）",
+  "calendarError": "发生错误\n{error}",
+  "pastTodayNote": "继续写日记，查看过去的回忆",
+  "edit": "编辑",
+  "randomNoDiary": "还没有日记",
+  "randomError": "发生错误：{error}",
+  "randomTryAgain": "再试一次",
+  "backToHome": "返回首页",
+  "startWritingDiary": "开始写日记吧",
+  "saveSaved": "✅ 已保存！",
+  "saveError": "❌ 发生错误：{error}",
+  "language": "语言",
+  "selectLanguage": "选择语言",
+  "pastTodayTitle": "过去的今天（{monthDay}）",
+  "pastTodayNoPastEntries": "{monthDay}还没有过去的日记",
+  "pastTodayKeepWriting": "继续写日记，留下回忆",
+  "searchEnterKeywordOrTag": "请输入关键词或标签",
+  "searchDiaryContent": "搜索日记内容",
+  "count": "条",
+  "searchByKeywordOrTag": "按关键词或标签搜索",
+  "searchNoResults": "未找到相关日记",
+  "searchTryDifferentKeyword": "请尝试其他关键词",
+  "@searchResults": {
+    "description": "搜索结果件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@tagSuggestions": {
+    "description": "标签建议件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsRecordStats": "记录统计",
+  "statsTotalEntries": "总日记数",
+  "statsCurrentStreak": "连续记录天数",
+  "days": "天",
+  "statsAvgChars": "平均字数",
+  "chars": "字",
+  "statsWriteRate": "记录率",
+  "statsPeriod": "记录期间",
+  "statsRecordingDays": "记录天数",
+  "statsFirstEntry": "第一篇日记",
+  "statsLatestEntry": "最新日记",
+  "daysCount": "天",
+  "statsMoodRecord": "心情记录",
+  "notSet": "未设置",
+  "times": "次",
+  "thisMonthEntries": "本月日记（{count}条）",
+  "@thisMonthEntries": {
+    "description": "本月日记件数",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSuccess": "已导出{count}条日记",
+  "@exportSuccess": {
+    "description": "导出成功消息",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConfirmMessage": "将导入{count}条日记。\n\n是否继续？",
+  "@importConfirmMessage": {
+    "description": "导入确认消息",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictMessage": "文件包含: {total}条（新增: {newCount}条，重复: {duplicateCount}条）\n\n如何处理重复的日记？",
+  "importSkipExisting": "保留现有",
+  "importOverwrite": "覆盖",
+  "importSuccess": "已导入{count}条日记",
+  "@importSuccess": {
+    "description": "导入成功消息",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyPolicy": "隐私政策",
+  "@privacyPolicy": {
+    "description": "隐私政策"
+  },
+  "termsOfService": "服务条款",
+  "@termsOfService": {
+    "description": "服务条款"
+  },
+  "urlOpenError": "无法打开URL",
+  "@urlOpenError": {
+    "description": "URL启动错误消息"
+  },
+  "goToToday": "返回今天",
+  "@goToToday": {
+    "description": "返回今天按钮"
+  },
+  "reminderSection": "提醒",
+  "@reminderSection": {
+    "description": "設定: リマインダーセクション見出し"
+  },
+  "reminderDaily": "每日提醒",
+  "@reminderDaily": {
+    "description": "毎日のリマインダー設定"
+  },
+  "reminderDailyDesc": "每天在固定时间通知您",
+  "@reminderDailyDesc": {
+    "description": "毎日のリマインダー説明"
+  },
+  "reminderTime": "通知时间",
+  "@reminderTime": {
+    "description": "通知時刻設定"
+  },
+  "reminderNotificationTitle": "今天的日记",
+  "@reminderNotificationTitle": {
+    "description": "リマインダー通知タイトル"
+  },
+  "reminderNotificationBody": "记录一下今天发生的事吧",
+  "@reminderNotificationBody": {
+    "description": "リマインダー通知本文"
+  },
+  "reminderPermissionDenied": "通知未被允许。请在系统设置中开启通知",
+  "@reminderPermissionDenied": {
+    "description": "通知権限拒否メッセージ"
+  },
+  "securitySection": "安全",
+  "@securitySection": {
+    "description": "設定: セキュリティセクション見出し"
+  },
+  "appLock": "应用锁",
+  "@appLock": {
+    "description": "アプリロック設定"
+  },
+  "appLockDesc": "启动时使用生物识别或屏幕锁保护",
+  "@appLockDesc": {
+    "description": "アプリロック説明"
+  },
+  "appLockUnavailable": "此设备未设置生物识别或屏幕锁",
+  "@appLockUnavailable": {
+    "description": "アプリロック利用不可メッセージ"
+  },
+  "appLockUnlock": "解锁",
+  "@appLockUnlock": {
+    "description": "ロック解除ボタン"
+  },
+  "appLockReason": "请验证身份以查看日记",
+  "@appLockReason": {
+    "description": "認証ダイアログの理由文"
+  },
+  "lastBackup": "上次备份：{date}",
+  "@lastBackup": {
+    "description": "最終バックアップ日時",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "lastBackupNever": "尚未备份",
+  "@lastBackupNever": {
+    "description": "バックアップ未実施"
+  },
+  "backupReminderTitle": "建议备份",
+  "@backupReminderTitle": {
+    "description": "バックアップ促しバナータイトル"
+  },
+  "backupReminderMessage": "距离上次备份已超过30天。请导出日记以保护数据",
+  "@backupReminderMessage": {
+    "description": "バックアップ促しバナー本文"
+  },
+  "backupNow": "立即备份",
+  "@backupNow": {
+    "description": "今すぐバックアップボタン"
+  },
+  "later": "稍后",
+  "@later": {
+    "description": "あとでボタン"
+  },
+  "statsEmotionTitle": "心情变化",
+  "statsEmotionSubtitle": "根据日记内容在设备上自动分析（不发送数据）",
+  "statsTopWordsTitle": "本月常用词",
+  "emotionPositive": "积极",
+  "emotionNegative": "消极",
+  "yearReview": "年度回顾",
+  "yearReviewEntries": "写下的日记",
+  "yearReviewChars": "写下的字数",
+  "yearReviewMaxStreak": "最长连续记录",
+  "yearReviewTopWords": "今年常用词",
+  "yearReviewMonthlyMood": "每月心情",
+  "yearReviewShare": "分享为图片",
+  "yearReviewNoData": "还没有日记",
+  "statsMeaningTitle": "意义梳理词汇",
+  "statsMeaningSubtitle": "每100字中领悟与因果类词语的密度",
+  "programs": "书写计划",
+  "pennebakerTitle": "表达性书写（4天课程）",
+  "pennebakerDesc": "针对萦绕心头的事，不加修饰地连续书写15分钟，同一主题坚持4天",
+  "pennebakerCitation": "源自 Pennebaker & Beall (1986) 及其后200多项研究",
+  "tgtTitle": "三件好事",
+  "tgtDesc": "写下今天发生的三件好事及其原因",
+  "tgtCitation": "基于 Seligman 等 (2005) 的积极心理学研究",
+  "programDisclaimer": "这些功能帮助你实践研究中报告过效果的书写方法，不构成治疗，也不保证效果",
+  "startWriting": "开始书写",
+  "continueWriting": "继续",
+  "newCourse": "开始新主题",
+  "themeLabel": "这4天要面对的主题",
+  "themeHint": "例如：工作上的挫折、人际关系的烦恼",
+  "timerKeepWriting": "不要停笔，想到什么写什么",
+  "timerDone": "15分钟到了，写完这段就可以结束",
+  "finishEarlyTitle": "提前结束？",
+  "finishEarlyMessage": "研究建议持续书写满15分钟",
+  "finishSession": "结束并保存",
+  "sessionSaved": "已保存（与日记正文分开存放）",
+  "goodThingLabel": "好事",
+  "whyLabel": "为什么？（可选）",
+  "tgtDoneToday": "今天已完成 ✅",
+  "sessionHistory": "历史记录",
+  "tgtValidation": "至少写一条",
+  "pennebakerCompleted": "4天课程完成！",
+  "ok": "确定",
+  "themeValidation": "请输入主题",
+  "homeStreakDays": "已连续{count}天！",
+  "homePromptLabel": "今日话题",
+  "homePromptSkip": "不用也可以",
+  "writeTodayButton": "写今天",
+  "reviewTitle": "回顾",
+  "stampsMenu": "贴纸",
+  "homeCollectedStamps": "已收集{count}枚贴纸",
+  "moodGood": "不错",
+  "moodMeh": "一般",
+  "writePromptHint": "话题：{prompt} — 不用也可以",
+  "celebrateTitle": "写好啦！",
+  "celebrateStreak": "连续{count}天！🔥",
+  "celebrateStampGet": "获得「{name}」贴纸！",
+  "stampsTitle": "收集贴纸",
+  "stampsCount": "已收集{count}枚",
+  "stampLockedHint": "还是个秘密",
+  "onboardSkip": "跳过",
+  "onboardNext": "下一步",
+  "onboardStart": "开始！",
+  "onboard1Title": "欢迎！",
+  "onboard1Body": "轻松几笔就能写的日记",
+  "onboard2Title": "点一下心情，随手就写",
+  "onboard2Body": "还有话题，不用也可以",
+  "onboard3Title": "坚持写就能集贴纸🎈",
+  "onboard3Body": "按自己的节奏慢慢来",
+  "howToUse": "再看一次使用说明",
+  "statsMoodShare": "心情占比",
+  "statsTopTags": "常用标签",
+  "promptQuestion1": "今天最好笑的事是？😆",
+  "promptQuestion2": "今天吃到最好吃的是？🍰",
+  "promptQuestion3": "现在最想为谁加油？📣",
+  "promptQuestion4": "今天遇到谁让你开心？🙌",
+  "promptQuestion5": "最近迷上了什么？🎮",
+  "promptQuestion6": "今天有什么小幸运？🍀",
+  "promptQuestion7": "明天有点期待的事是？✨",
+  "promptQuestion8": "用一句话形容今天？💬",
+  "stampNameFirst": "第一步",
+  "stampNameCount10": "写满10篇",
+  "stampNameCount30": "写满30篇",
+  "stampNameCount50": "写满50篇",
+  "stampNameCount100": "写满100篇",
+  "stampNameStreak3": "连续3天",
+  "stampNameStreak7": "连续一周",
+  "stampNameStreak14": "连续两周",
+  "stampNameStreak30": "连续一个月",
+  "statsThisMonth": "本月",
+  "driveSection": "Google Drive 备份",
+  "driveSignIn": "使用 Google 登录",
+  "driveSignInDesc": "把日记备份到你自己的 Google Drive，换手机或其他设备也能继续写。数据只保存在你的 Drive 里，开发者无法查看。",
+  "driveAutoBackup": "自动备份",
+  "driveAutoBackupDesc": "保存日记后自动备份",
+  "driveBackupNow": "立即备份",
+  "driveBackupDone": "备份完成",
+  "driveBackupFailed": "上次备份失败",
+  "driveLastBackup": "上次备份：{time}",
+  "driveBackupNever": "还没有备份",
+  "driveRestore": "恢复",
+  "driveRestoreDesc": "从 Drive 备份中找回日记",
+  "driveRestoreConfirmTitle": "从备份恢复",
+  "driveRestoreConfirmMessage": "将把 Drive 备份和本机日记合并。同一天的日记保留较新的一份。要恢复吗？",
+  "driveRestoreResult": "新增 {added} 条、更新 {updated} 条",
+  "driveNoBackup": "未找到备份",
+  "driveSignOut": "退出登录",
+  "driveDeleteBackup": "删除备份",
+  "driveDeleteBackupDesc": "删除 Drive 上的备份文件",
+  "driveDeleteBackupConfirm": "将删除 Google Drive 上的备份。本机日记不受影响。要删除吗？",
+  "driveDeleteBackupDone": "备份已删除",
+  "driveError": "出错了：{error}",
+  "migrationDriveNote": "☁️ 也可以用 Google Drive 备份来换机——登录 Google 即可（见下方“Google Drive备份”栏目）",
+  "unsavedChangesTitle": "未保存的更改",
+  "unsavedChangesMessage": "有尚未保存的更改。要放弃并继续吗？",
+  "discardChanges": "放弃",
+  "kidsSite": "算术、将棋与星空",
+  "kidsSiteDesc": "儿童学习网站（日语）",
+  "a11yGuideTitle": "使用读屏软件时",
+  "a11yGuideStart": "朗读来自您的设备，而不是本应用。请在「设置 > 无障碍」中打开 TalkBack。多数设备也可长按两个音量键切换。",
+  "a11yGuideNames": "可以点按的地方都有名称。滑动切换到下一项，双击即可选中。",
+  "a11yGuideCalendar": "只有日历上标记「当天有日记」的圆点无法朗读。请改用日历下方的本月日记列表。",
+  "a11yBack": "返回",
+  "a11yDarkMode": "切换到深色模式",
+  "a11yLightMode": "切换到浅色模式",
+  "a11yPrevMonth": "上个月",
+  "a11yNextMonth": "下个月",
+  "a11yPickYearMonth": "选择年份和月份",
+  "a11yCloseHint": "关闭提示"
+}

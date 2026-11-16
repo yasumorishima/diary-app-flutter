@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- The INTERNET permission is required for development. Specifically,
+         the Flutter tool needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- 読み上げ検証専用。profile ビルドにだけ入り release には入らない。
+         中身は A11yLogger.kt を参照。
+
+         🔴 android:process で別プロセスに出すこと。同じプロセスに置くと、
+         画面が変わるたびのツリー走査が Flutter の UI スレッドを塞ぎ、
+         アプリ自身が ANR で起動できなくなる（2026-08-31 に実測。ANR 14 回）。 -->
+    <application>
+        <service
+            android:name=".A11yLogger"
+            android:exported="true"
+            android:process=":a11ylog"
+            android:label="A11y logger (profile only)"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/a11y_logger_config"/>
+        </service>
+
+        <!-- 読み上げに渡す文字を端末の TTS に読ませて測る。profile 限定。
+             adb から叩くので exported="true" が要る。 -->
+        <receiver
+            android:name=".TtsProbe"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.diary.daily.TTS_PROBE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

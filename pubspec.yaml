@@ -1,0 +1,86 @@
+name: diary_app
+description: 連用日記 - Flutter版スマホアプリ
+version: 1.0.42+42
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 多言語対応
+  flutter_localizations:
+    sdk: flutter
+  # Material は 3.50 から SDK 内の package:flutter/material.dart が deprecated になり、
+  # この独立パッケージへ移った（3.47 以上で使える）
+  material_ui: ^1.11.0
+
+  # データベース（Web対応）
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path: ^1.8.3
+
+  # 状態管理
+  provider: ^6.1.1
+
+  # ローカルストレージ（設定保存等）
+  shared_preferences: ^2.2.2
+
+  # UI
+  intl: ^0.20.3  # 日付フォーマット（flutter_localizations の要求に追従）
+  table_calendar: ^3.0.9  # カレンダーウィジェット
+
+  # 広告
+  google_mobile_ads: ^9.0.0
+
+  # レビュー依頼（In-App Review API）
+  in_app_review: ^2.0.9
+
+  # 通知（デイリーリマインダー）
+  flutter_local_notifications: ^19.0.0
+  timezone: ^0.10.0
+  flutter_timezone: ^5.1.1
+
+  # アプリロック（生体認証・画面ロック）
+  local_auth: ^2.3.0
+
+  # Google Drive バックアップ（任意ログイン・ユーザー自身の Drive appDataFolder へ保存）
+  google_sign_in: ^7.2.0
+  googleapis: ^14.0.0
+  http: ^1.2.0
+
+  # ファイル操作（エクスポート・インポート用）
+  path_provider: ^2.1.1
+  share_plus: ^12.0.2
+  url_launcher: ^6.2.2
+
+  # アイコン
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.6
+  hive_generator: ^2.0.1
+  flutter_launcher_icons: ^0.14.4  # アプリアイコン自動生成
+
+flutter:
+  uses-material-design: true
+  generate: true  # ARBファイルから多言語リソースを自動生成
+
+  # アセット（アイコン、画像等）
+  assets:
+    - assets/icon/
+
+# アプリアイコン自動生成設定
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  # Android Adaptive Icon設定
+  adaptive_icon_background: "#667eea"  # グラデーション紫（開始色）
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"

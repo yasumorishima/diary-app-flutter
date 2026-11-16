@@ -1,0 +1,427 @@
+{
+  "@@locale": "es",
+  "appTitle": "📖 Diario Diario",
+  "appSubtitle": "Registra tu vida diaria",
+  "previousDay": "Anterior",
+  "nextDay": "Siguiente",
+  "calendar": "Calendario",
+  "writeDiary": "Escribir",
+  "random": "Aleatorio",
+  "search": "Buscar",
+  "stats": "Estadísticas",
+  "settings": "Configuración",
+  "pastToday": "Hoy en el Pasado",
+  "export": "Exportar",
+  "tagView": "Etiquetas",
+  "date": "Fecha",
+  "selectFromCalendar": "Seleccionar del calendario",
+  "pastFutureDateNote": "Puedes seleccionar fechas pasadas o futuras",
+  "todayMood": "Estado de Ánimo de Hoy",
+  "moodHappy": "Feliz",
+  "moodSad": "Triste",
+  "moodAngry": "Enojado",
+  "moodSleepy": "Somnoliento",
+  "moodThinking": "Pensativo",
+  "moodCalm": "Tranquilo",
+  "moodFun": "Divertido",
+  "moodAnxious": "Ansioso",
+  "diary": "Diario",
+  "diaryPlaceholder": "Escribe sobre tu día...",
+  "diaryValidationError": "Por favor ingresa el contenido del diario",
+  "tags": "Etiquetas",
+  "tagsPlaceholder": "ej. trabajo, hobby, familia",
+  "tagsHelper": "Separa múltiples etiquetas con comas",
+  "save": "Guardar",
+  "saving": "Guardando...",
+  "searching": "Buscando...",
+  "clear": "Borrar",
+  "keyword": "Palabra clave",
+  "tag": "Etiqueta",
+  "searchDiaryPlaceholder": "Buscar contenido del diario...",
+  "searchTagPlaceholder": "Ingresa nombre de etiqueta (ej. trabajo)",
+  "noTagsYet": "Aún no hay etiquetas",
+  "tagSuggestions": "Sugerencias de etiquetas ({count})",
+  "searchKeywordOrTag": "Buscar por palabra clave o etiqueta",
+  "noDiariesFound": "No se encontraron diarios",
+  "tryDifferentKeyword": "Prueba con otra palabra clave",
+  "searchResults": "Resultados de búsqueda ({count})",
+  "searchInputRequired": "Por favor ingresa una palabra clave o etiqueta",
+  "searchError": "Ocurrió un error: {error}",
+  "statsTitle": "📊 Estadísticas",
+  "recordStats": "Estadísticas de Registro",
+  "totalDiaries": "Total de Diarios",
+  "consecutiveRecords": "Racha",
+  "averageLength": "Long. Promedio",
+  "recordRate": "Tasa de Registro",
+  "recordPeriod": "Período",
+  "firstDiary": "Primera Entrada",
+  "latestDiary": "Última Entrada",
+  "periodLabel": "Período",
+  "moodRecord": "Registro de Estado de Ánimo",
+  "moodUnset": "Sin establecer",
+  "noDiariesYet": "Aún no hay diarios",
+  "statsWillAppear": "Las estadísticas aparecerán cuando empieces a escribir",
+  "statsLoadError": "Error al cargar estadísticas: {error}",
+  "settingsTitle": "⚙️ Configuración",
+  "displaySettings": "Pantalla",
+  "theme": "Tema",
+  "themeLight": "Modo Claro",
+  "themeLightDesc": "Usar siempre tema claro",
+  "themeDark": "Modo Oscuro",
+  "themeDarkDesc": "Usar siempre tema oscuro",
+  "themeSystem": "Sistema",
+  "themeSystemDesc": "Seguir configuración del dispositivo",
+  "dataManagement": "Gestión de Datos",
+  "dataExport": "Exportar Datos",
+  "dataExportDesc": "Guardar diarios en archivo (antes de migrar o desinstalar)",
+  "dataImport": "Importar Datos",
+  "dataImportDesc": "Restaurar diarios desde archivo guardado",
+  "deleteAllData": "Eliminar Todos los Datos",
+  "deleteAllDataDesc": "Eliminar todos los diarios (no se puede deshacer)",
+  "deviceMigration": "Guía de Respaldo y Migración",
+  "dataLossWarning": "⚠ Desinstalar la app eliminará todos los datos. Por favor, exporte sus datos antes.",
+  "migrationStep1": "Exportar datos en dispositivo antiguo",
+  "migrationStep1Desc": "Se descargará el archivo",
+  "migrationStep2": "Transferir archivo a nuevo dispositivo",
+  "migrationStep2Desc": "Vía correo electrónico, almacenamiento en la nube, etc.",
+  "migrationStep3": "Importar datos en nuevo dispositivo",
+  "migrationStep3Desc": "Seleccionar archivo para completar restauración",
+  "appInfo": "Información de la App",
+  "version": "Versión",
+  "appName": "Nombre de la App",
+  "noExportData": "No hay diarios para exportar",
+  "exportError": "Error al exportar: {error}",
+  "importDialogTitle": "Importar Datos",
+  "importError": "Error al importar: {error}",
+  "fileReadError": "Error al leer el archivo",
+  "noValidData": "No se encontraron datos válidos",
+  "noBackupsFound": "No se encontraron copias de seguridad",
+  "importTapToRestore": "Toca una copia de seguridad para restaurarla",
+  "deleteBackupTitle": "Eliminar copia de seguridad",
+  "deleteBackupMessage": "¿Eliminar la copia de seguridad del {date}?",
+  "cancel": "Cancelar",
+  "import": "Importar",
+  "deleteConfirmTitle": "Eliminar Todos los Datos",
+  "deleteConfirmMessage": "Todos los diarios serán eliminados. Esto no se puede deshacer.\n\n¿Estás seguro?",
+  "delete": "Eliminar",
+  "deleteSuccess": "Todos los datos han sido eliminados",
+  "deleteError": "Error al eliminar: {error}",
+  "themeSelectTitle": "Seleccionar Tema",
+  "selectYear": "Seleccionar Año",
+  "thisMonthDiaries": "Este Mes ({count})",
+  "calendarError": "Ocurrió un error\n{error}",
+  "pastTodayNote": "Sigue escribiendo para ver recuerdos del pasado",
+  "edit": "Editar",
+  "randomNoDiary": "Aún no hay diarios",
+  "randomError": "Ocurrió un error: {error}",
+  "randomTryAgain": "Intentar de Nuevo",
+  "backToHome": "Inicio",
+  "startWritingDiary": "Empieza a escribir tu diario",
+  "saveSaved": "✅ ¡Guardado!",
+  "saveError": "❌ Ocurrió un error: {error}",
+  "language": "Idioma",
+  "selectLanguage": "Seleccionar idioma",
+  "pastTodayTitle": "Pasado hoy ({monthDay})",
+  "pastTodayNoPastEntries": "No hay entradas pasadas el {monthDay}",
+  "pastTodayKeepWriting": "Sigue escribiendo para construir recuerdos",
+  "searchEnterKeywordOrTag": "Ingrese palabra clave o etiqueta",
+  "searchDiaryContent": "Buscar contenido del diario",
+  "count": " entradas",
+  "searchByKeywordOrTag": "Buscar por palabra clave o etiqueta",
+  "searchNoResults": "No se encontraron diarios",
+  "searchTryDifferentKeyword": "Prueba con otra palabra clave",
+  "@searchResults": {
+    "description": "Recuento de resultados de búsqueda",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@tagSuggestions": {
+    "description": "Recuento de sugerencias de etiquetas",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statsRecordStats": "Estadísticas de registros",
+  "statsTotalEntries": "Total de entradas",
+  "statsCurrentStreak": "Racha actual",
+  "days": " días",
+  "statsAvgChars": "Longitud promedio",
+  "chars": " caracteres",
+  "statsWriteRate": "Tasa de registro",
+  "statsPeriod": "Período",
+  "statsRecordingDays": "Días registrados",
+  "statsFirstEntry": "Primera entrada",
+  "statsLatestEntry": "Última entrada",
+  "daysCount": " días",
+  "statsMoodRecord": "Registro de estado de ánimo",
+  "notSet": "Sin configurar",
+  "times": " veces",
+  "thisMonthEntries": "Entradas de este mes ({count})",
+  "@thisMonthEntries": {
+    "description": "Recuento de entradas de este mes",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSuccess": "Se exportaron {count} diarios",
+  "@exportSuccess": {
+    "description": "Mensaje de éxito de exportación",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConfirmMessage": "{count, plural, =1{Se importará 1 diario.} other{Se importarán {count} diarios.}}\n\n¿Continuar?",
+  "@importConfirmMessage": {
+    "description": "Mensaje de confirmación de importación",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importConflictMessage": "Archivo contiene: {total} entradas (Nuevas: {newCount}, Duplicadas: {duplicateCount})\n\n¿Qué desea hacer con las entradas duplicadas?",
+  "importSkipExisting": "Mantener existentes",
+  "importOverwrite": "Sobrescribir",
+  "importSuccess": "Se importaron {count} diarios",
+  "@importSuccess": {
+    "description": "Mensaje de éxito de importación",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyPolicy": "Política de Privacidad",
+  "@privacyPolicy": {
+    "description": "Política de Privacidad"
+  },
+  "termsOfService": "Términos de Servicio",
+  "@termsOfService": {
+    "description": "Términos de Servicio"
+  },
+  "urlOpenError": "No se pudo abrir la URL",
+  "@urlOpenError": {
+    "description": "Mensaje de error al abrir URL"
+  },
+  "goToToday": "Ir a hoy",
+  "@goToToday": {
+    "description": "Botón ir a hoy"
+  },
+  "reminderSection": "Recordatorio",
+  "@reminderSection": {
+    "description": "設定: リマインダーセクション見出し"
+  },
+  "reminderDaily": "Recordatorio diario",
+  "@reminderDaily": {
+    "description": "毎日のリマインダー設定"
+  },
+  "reminderDailyDesc": "Recibe una notificación cada día a la hora elegida",
+  "@reminderDailyDesc": {
+    "description": "毎日のリマインダー説明"
+  },
+  "reminderTime": "Hora de notificación",
+  "@reminderTime": {
+    "description": "通知時刻設定"
+  },
+  "reminderNotificationTitle": "Diario de hoy",
+  "@reminderNotificationTitle": {
+    "description": "リマインダー通知タイトル"
+  },
+  "reminderNotificationBody": "Escribe sobre tu día",
+  "@reminderNotificationBody": {
+    "description": "リマインダー通知本文"
+  },
+  "reminderPermissionDenied": "Las notificaciones no están permitidas. Actívalas en los ajustes del sistema",
+  "@reminderPermissionDenied": {
+    "description": "通知権限拒否メッセージ"
+  },
+  "securitySection": "Seguridad",
+  "@securitySection": {
+    "description": "設定: セキュリティセクション見出し"
+  },
+  "appLock": "Bloqueo de la app",
+  "@appLock": {
+    "description": "アプリロック設定"
+  },
+  "appLockDesc": "Protege la app con biometría o el bloqueo de pantalla",
+  "@appLockDesc": {
+    "description": "アプリロック説明"
+  },
+  "appLockUnavailable": "Este dispositivo no tiene configurada la biometría ni el bloqueo de pantalla",
+  "@appLockUnavailable": {
+    "description": "アプリロック利用不可メッセージ"
+  },
+  "appLockUnlock": "Desbloquear",
+  "@appLockUnlock": {
+    "description": "ロック解除ボタン"
+  },
+  "appLockReason": "Autentícate para ver tu diario",
+  "@appLockReason": {
+    "description": "認証ダイアログの理由文"
+  },
+  "lastBackup": "Última copia: {date}",
+  "@lastBackup": {
+    "description": "最終バックアップ日時",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "lastBackupNever": "Aún no hay copia de seguridad",
+  "@lastBackupNever": {
+    "description": "バックアップ未実施"
+  },
+  "backupReminderTitle": "Copia de seguridad recomendada",
+  "@backupReminderTitle": {
+    "description": "バックアップ促しバナータイトル"
+  },
+  "backupReminderMessage": "Han pasado más de 30 días desde la última copia. Exporta tu diario para protegerlo",
+  "@backupReminderMessage": {
+    "description": "バックアップ促しバナー本文"
+  },
+  "backupNow": "Hacer copia ahora",
+  "@backupNow": {
+    "description": "今すぐバックアップボタン"
+  },
+  "later": "Más tarde",
+  "@later": {
+    "description": "あとでボタン"
+  },
+  "statsEmotionTitle": "Emociones",
+  "statsEmotionSubtitle": "Analizado en tu dispositivo, sin enviar datos",
+  "statsTopWordsTitle": "Palabras frecuentes de este mes",
+  "emotionPositive": "Positivo",
+  "emotionNegative": "Negativo",
+  "yearReview": "Resumen del año",
+  "yearReviewEntries": "Entradas escritas",
+  "yearReviewChars": "Caracteres escritos",
+  "yearReviewMaxStreak": "Racha más larga",
+  "yearReviewTopWords": "Palabras frecuentes del año",
+  "yearReviewMonthlyMood": "Estado de ánimo mensual",
+  "yearReviewShare": "Compartir como imagen",
+  "yearReviewNoData": "Aún no hay entradas",
+  "statsMeaningTitle": "Palabras de reflexión",
+  "statsMeaningSubtitle": "Densidad de palabras de comprensión y razonamiento por cada 100 caracteres",
+  "programs": "Programas",
+  "pennebakerTitle": "Escritura expresiva (curso de 4 días)",
+  "pennebakerDesc": "Escribe 15 minutos sobre algo que te preocupa, sin corregir. Continúa el mismo tema durante 4 días",
+  "pennebakerCitation": "Basado en Pennebaker & Beall (1986) y más de 200 estudios posteriores",
+  "tgtTitle": "Tres cosas buenas",
+  "tgtDesc": "Escribe tres cosas que salieron bien hoy y por qué",
+  "tgtCitation": "Basado en la investigación de psicología positiva de Seligman et al. (2005)",
+  "programDisclaimer": "Estas funciones te ayudan a practicar métodos de escritura estudiados en la investigación. No son un tratamiento médico ni garantizan resultados",
+  "startWriting": "Empezar a escribir",
+  "continueWriting": "Continuar",
+  "newCourse": "Empezar un tema nuevo",
+  "themeLabel": "Tu tema para estos 4 días",
+  "themeHint": "p. ej. un conflicto, algo que te preocupa",
+  "timerKeepWriting": "Sigue escribiendo sin detenerte a corregir",
+  "timerDone": "Ya pasaron 15 minutos, termina tu idea y cierra",
+  "finishEarlyTitle": "¿Terminar antes?",
+  "finishEarlyMessage": "Los estudios recomiendan escribir los 15 minutos completos",
+  "finishSession": "Terminar y guardar",
+  "sessionSaved": "Guardado (separado de tus entradas del diario)",
+  "goodThingLabel": "Algo bueno",
+  "whyLabel": "¿Por qué fue bueno? (opcional)",
+  "tgtDoneToday": "Hecho por hoy ✅",
+  "sessionHistory": "Historial",
+  "tgtValidation": "Escribe al menos una",
+  "pennebakerCompleted": "¡Curso de 4 días completado!",
+  "ok": "Aceptar",
+  "themeValidation": "Introduce tu tema",
+  "homeStreakDays": "{count, plural, =1{¡1 día seguido!} other{¡{count} días seguidos!}}",
+  "homePromptLabel": "Tema de hoy",
+  "homePromptSkip": "Puedes saltarlo",
+  "writeTodayButton": "Escribir hoy",
+  "reviewTitle": "Recuerdos",
+  "stampsMenu": "Sellos",
+  "homeCollectedStamps": "{count, plural, =1{1 sello reunido} other{{count} sellos reunidos}}",
+  "moodGood": "Bien",
+  "moodMeh": "Normal",
+  "writePromptHint": "Tema: {prompt} — puedes saltarlo",
+  "celebrateTitle": "¡Lo lograste!",
+  "celebrateStreak": "¡{count} días seguidos! 🔥",
+  "celebrateStampGet": "¡Sello «{name}» conseguido!",
+  "stampsTitle": "Colección de sellos",
+  "stampsCount": "{count} reunidos",
+  "stampLockedHint": "Aún es secreto",
+  "onboardSkip": "Saltar",
+  "onboardNext": "Siguiente",
+  "onboardStart": "¡Empezar!",
+  "onboard1Title": "¡Bienvenido!",
+  "onboard1Body": "Un diario relajado para escribir en un momento",
+  "onboard2Title": "Toca un ánimo y escribe",
+  "onboard2Body": "También hay temas, puedes saltarlos",
+  "onboard3Title": "Sigue y reúne sellos 🎈",
+  "onboard3Body": "A tu propio ritmo, sin presión",
+  "howToUse": "Ver cómo funciona otra vez",
+  "statsMoodShare": "Distribución de ánimo",
+  "statsTopTags": "Etiquetas más usadas",
+  "promptQuestion1": "¿Qué te hizo reír más hoy? 😆",
+  "promptQuestion2": "¿Lo más rico que comiste hoy? 🍰",
+  "promptQuestion3": "¿Qué estás apoyando ahora? 📣",
+  "promptQuestion4": "¿Quién te alegró el día hoy? 🙌",
+  "promptQuestion5": "¿En qué andas metido últimamente? 🎮",
+  "promptQuestion6": "¿Algún golpe de suerte hoy? 🍀",
+  "promptQuestion7": "¿Qué esperas con ganas mañana? ✨",
+  "promptQuestion8": "¿Hoy en una palabra? 💬",
+  "stampNameFirst": "Primer paso",
+  "stampNameCount10": "10 entradas",
+  "stampNameCount30": "30 entradas",
+  "stampNameCount50": "50 entradas",
+  "stampNameCount100": "100 entradas",
+  "stampNameStreak3": "3 días seguidos",
+  "stampNameStreak7": "1 semana seguida",
+  "stampNameStreak14": "2 semanas seguidas",
+  "stampNameStreak30": "1 mes seguido",
+  "statsThisMonth": "Este mes",
+  "driveSection": "Copia en Google Drive",
+  "driveSignIn": "Iniciar sesión con Google",
+  "driveSignInDesc": "Guarda tu diario en tu propio Google Drive y sigue escribiendo en cualquier dispositivo. Tus datos quedan solo en tu Drive: el desarrollador no puede verlos.",
+  "driveAutoBackup": "Copia automática",
+  "driveAutoBackupDesc": "Hacer copia automáticamente al guardar el diario",
+  "driveBackupNow": "Hacer copia ahora",
+  "driveBackupDone": "Copia completada",
+  "driveBackupFailed": "La última copia falló",
+  "driveLastBackup": "Última copia: {time}",
+  "driveBackupNever": "Aún no hay copia",
+  "driveRestore": "Restaurar",
+  "driveRestoreDesc": "Recupera tu diario desde la copia en Drive",
+  "driveRestoreConfirmTitle": "Restaurar desde la copia",
+  "driveRestoreConfirmMessage": "Se combinará la copia de Drive con el diario de este dispositivo. Si coincide el día, se queda el más reciente. ¿Restaurar?",
+  "driveRestoreResult": "{added} añadidos, {updated} actualizados",
+  "driveNoBackup": "No se encontró ninguna copia",
+  "driveSignOut": "Cerrar sesión",
+  "driveDeleteBackup": "Eliminar copia",
+  "driveDeleteBackupDesc": "Elimina el archivo de copia de tu Drive",
+  "driveDeleteBackupConfirm": "Se eliminará la copia en tu Google Drive. El diario de este dispositivo se conserva. ¿Eliminar?",
+  "driveDeleteBackupDone": "Copia eliminada",
+  "driveError": "Error: {error}",
+  "migrationDriveNote": "☁️ También puedes migrar con la copia de Google Drive: solo inicia sesión con Google (ver la sección de abajo)",
+  "unsavedChangesTitle": "Cambios sin guardar",
+  "unsavedChangesMessage": "Tienes cambios sin guardar. ¿Descartarlos y continuar?",
+  "discardChanges": "Descartar",
+  "kidsSite": "Matemáticas, shogi y estrellas",
+  "kidsSiteDesc": "Sitio de aprendizaje para niños (en japonés)",
+  "a11yGuideTitle": "Con un lector de pantalla",
+  "a11yGuideStart": "La lectura en voz alta la hace tu dispositivo, no esta aplicación. Activa TalkBack en Ajustes > Accesibilidad. En muchos dispositivos también puedes mantener pulsadas las dos teclas de volumen.",
+  "a11yGuideNames": "Todo lo que se puede tocar tiene nombre. Desliza para pasar al siguiente elemento y toca dos veces para activarlo.",
+  "a11yGuideCalendar": "Solo el punto que marca en el calendario un día con entrada no se puede leer en voz alta. Usa la lista de entradas de este mes que hay debajo del calendario.",
+  "a11yBack": "Atrás",
+  "a11yDarkMode": "Cambiar al modo oscuro",
+  "a11yLightMode": "Cambiar al modo claro",
+  "a11yPrevMonth": "Mes anterior",
+  "a11yNextMonth": "Mes siguiente",
+  "a11yPickYearMonth": "Elegir año y mes",
+  "a11yCloseHint": "Cerrar la sugerencia"
+}
