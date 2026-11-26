@@ -52,7 +52,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Localization** | Flutter intl (ARB files) |
 | **Architecture** | Single-codebase cross-platform |
 | **Testing** | flutter_test — unit tests for model + Hive database layer |
-| **CI/CD** | GitHub Actions (analyze + test + emulator tests here; signed AAB → Google Play and store-listing updates from the private release repo) |
+| **CI/CD** | GitHub Actions (analyze + test + emulator tests and the signed AAB → Google Play release here; store-listing updates from the private repo) |
 
 ## Development Approach
 
@@ -94,21 +94,22 @@ The Flutter version adds offline capability, native performance, and multi-langu
 | Repository | What is there |
 |---|---|
 | **This repository** (public) | The app source, the tests and the CI that checks every change |
-| [daily-diary](https://github.com/yasumorishima/daily-diary) 🔒 *(private)* | The release side: signing and publishing to Google Play, the store listing, the production ad IDs, and the design notes and history up to v1.0.42 |
+| [daily-diary](https://github.com/yasumorishima/daily-diary) 🔒 *(private)* | The store listing and screenshots, and the design notes and history up to v1.0.42 |
 
-The production AdMob IDs are not in this repository. Builds from here use Google's test ad IDs, and a release build made without the production IDs shows no ads.
+The production AdMob IDs are not in this repository's source: they are Secrets of the `production` environment, used only by the release workflow. Other builds use Google's test ad IDs, and a release build made without the production IDs shows no ads.
 
 ## CI/CD
 
 GitHub Actions in this repository:
 
-- **Flutter CI** (`flutter-ci.yml`): `flutter analyze` + `flutter test` on every push and pull request to `main`, and a check that `pubspec.lock` is up to date
+- **Flutter CI** (`flutter-ci.yml`): `flutter analyze` + `flutter test` + a debug APK build on every push and pull request to `main` (and on pushes to `ccr-**` cloud-session branches), and a check that `pubspec.lock` is up to date
+- **Release** (`release.yml`): on a tag `v<version>` on `main`, builds the signed release AAB, checks that it carries the production AdMob IDs and the upload-key signature (`scripts/build_release.sh`), and publishes it to Google Play production. A tag `check-*` runs the same build and checks without publishing. Signing keys, the service account and the AdMob IDs are Secrets of the `production` environment, which only those tags can use
 - **Integration Test** (`integration-test.yml`): Android emulator (API 34, KVM) — a device audit of every screen (each tappable control must have a name), home screenshots in three themes/languages, and the E2E flow (mood sticker → write & save → save celebration → stamp collection)
 - **A11y TTS measure** (`a11y-tts.yml`): on pull requests that change the strings or the probe, the emulator's TTS reads the screen-reader strings and the audio is measured (TalkBack itself is not in the emulator image)
 - **A11y speech capture** (`a11y-speech.yml`): manual dispatch → collects what a screen reader would receive (order, text, live-region events) through a profile-only accessibility service
 - **Flutter update check** (`flutter-update-check.yml`): weekly; when a newer stable Flutter is out, it tries pub get / analyze / test / a debug build with it and opens an issue with the results
 
-The release (signed AAB → Google Play production) and the store listing updates run from the private repository, on a commit of this one.
+The store listing and screenshot updates run from the private repository.
 📝 [Build setup article (Japanese)](https://zenn.dev/shogaku/articles/flutter-android-build-github-actions)
 
 ## Status
