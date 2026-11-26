@@ -3,20 +3,34 @@ name: Release
 # Google Play へのリリース。非公開の daily-diary（android-build.yml / release-build-check.yml）から
 # 2026-11-26 に移した: 非公開リポジトリの Actions の枠が尽きてジョブが起動しなくなったため。
 #
-#   タグ v<version>        … 署名つき release AAB を作って確かめ、Google Play の production へ上げる（即公開）
-#   タグ check-<なんでも>  … 同じビルドと確かめだけ。上げない
+#   main への push で pubspec.yaml の version に対応するタグ v<version> がまだ無ければ
+#     … 署名つき release AAB を作って確かめ、Google Play の production へ上げ（即公開）、タグ v<version> を付ける
+#     （つまり「version を上げた PR を main にマージする」＝リリース）
+#   手動実行（Actions → Release → Run workflow）
+#     … publish を外せば同じビルドと確かめだけ。付ければ上と同じく公開する
 #
-# タグは main の履歴にあるコミットに付ける。v タグは pubspec.yaml の version（+ の前）と一致させる。
+# タグで起動しないのは、Claude Code のクラウドセッションからはタグを push できないため
+# （作業ブランチへの push しか通らない）。PR のマージなら、そこから完結する。
+#
 # 署名の鍵・サービスアカウント・本番の AdMob ID は "production" 環境の Secrets にだけ置く。
-# この環境は v* と check-* のタグからしか使えないようにしてあるので、PR（fork を含む）や
-# ブランチへの push からは Secrets に届かない。ログは公開されるので、Secrets は表に出さない。
+# この環境は main からしか使えないようにしてある。main はルールセットで直接の push を止め、
+# PR のマージ（と Admin）だけにしてある。PR（fork を含む）やほかのブランチからは Secrets に届かない。
+# ログは公開されるので、Secrets は表に出さない。
 # Secrets に触れるジョブなので、使う action はタグでなくコミット SHA で固定する（タグの付け替えで中身を差し替えられないように）。
 
 on:
   push:
-    tags:
-      - 'v*'
-      - 'check-*'
+    branches:
+      - main
+    paths:
+      - 'pubspec.yaml'
+      - '.github/workflows/release.yml'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Google Play の production へ上げる（外すとビルドと確かめだけ）'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -26,29 +40,66 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Secrets を使わずに、リリースするかどうかだけ決める
+  decide:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      version: ${{ steps.v.outputs.version }}
+      build: ${{ steps.v.outputs.build }}
+      publish: ${{ steps.v.outputs.publish }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Version and whether it is already released
+        id: v
+        env:
+          EVENT: ${{ github.event_name }}
+          PUBLISH_INPUT: ${{ inputs.publish }}
+          REPO: ${{ github.repository }}
+        run: |
+          [ "$GITHUB_REF" = refs/heads/main ] || { echo "::error::main 以外からは動かさない（$GITHUB_REF）"; exit 1; }
+          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/^version: *//; s/+.*//')
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::version の形が想定外: $version"; exit 1; }
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          released=false
+          if git ls-remote --exit-code --tags "https://github.com/$REPO.git" "refs/tags/v$version" >/dev/null; then
+            released=true
+          fi
+          if [ "$EVENT" = workflow_dispatch ]; then
+            build=true
+            publish=$PUBLISH_INPUT
+            if [ "$publish" = true ] && [ "$released" = true ]; then
+              echo "::error::v$version はもうリリース済み。version を上げてから"; exit 1
+            fi
+          elif [ "$released" = true ]; then
+            build=false; publish=false
+            echo "v$version はリリース済みなので何もしない"
+          else
+            build=true; publish=true
+          fi
+          echo "build=$build" >> "$GITHUB_OUTPUT"
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "version $version / released $released / build $build / publish $publish"
+
   release:
+    needs: decide
+    if: needs.decide.outputs.build == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 40
     environment: production
+    permissions:
+      contents: write   # タグ v<version> を付けるため
 
     steps:
       - name: Checkout
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
-          fetch-depth: 0
           persist-credentials: false
-
-      - name: The tag must be on main (and match the version)
-        env:
-          TAG: ${{ github.ref_name }}
-        run: |
-          git fetch -q origin main
-          git merge-base --is-ancestor HEAD origin/main || { echo "::error::$TAG は main の履歴に無い"; exit 1; }
-          version=$(grep -m1 '^version:' pubspec.yaml | sed 's/^version: *//; s/+.*//')
-          echo "source: $(git log -1 --format='%h %s') / version $version"
-          case "$TAG" in
-            v*) [ "$TAG" = "v$version" ] || { echo "::error::タグ $TAG と pubspec.yaml の version ($version) が違う"; exit 1; } ;;
-          esac
 
       - name: Read the Flutter pin
         id: pin
@@ -85,7 +136,7 @@ jobs:
         run: bash scripts/build_release.sh
 
       - name: Publish to Google Play (production)
-        if: startsWith(github.ref_name, 'v')
+        if: needs.decide.outputs.publish == 'true'
         uses: r0adkll/upload-google-play@935ef9c68bb393a8e6116b1575626a7f5be3a7fb # v1.1.3
         with:
           serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
@@ -93,3 +144,14 @@ jobs:
           releaseFiles: ${{ steps.aab.outputs.aab }}
           track: production
           status: completed
+
+      # 次の push で同じ version を上げ直さないための印（GITHUB_TOKEN で作ったタグは別のワークフローを起こさない）
+      - name: Tag the release
+        if: needs.decide.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.decide.outputs.version }}
+        run: |
+          gh api -X POST "repos/$GITHUB_REPOSITORY/git/refs" \
+            -f ref="refs/tags/v$VERSION" -f sha="$GITHUB_SHA" --silent
+          echo "tagged v$VERSION at ${GITHUB_SHA::7}"
