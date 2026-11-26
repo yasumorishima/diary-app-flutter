@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+      # Claude Code のクラウドセッションの作業ブランチ。そこから workflow_dispatch は
+      # 叩けない（GitHub App に Actions の書き込み権限が無く 403）ので、push で回す
+      - 'ccr-**'
   pull_request:
     branches:
       - main
