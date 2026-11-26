@@ -30,8 +30,9 @@ android {
         applicationId = "com.diary.daily"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        // local_auth (androidx.biometric) が minSdk 23 以上を要求
-        minSdk = maxOf(flutter.minSdkVersion, 23)
+        // Play Age Signals (com.google.android.play:age-signals) が minSdk 24 以上を要求
+        // （以前は local_auth の 23 だった）
+        minSdk = maxOf(flutter.minSdkVersion, 24)
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -71,4 +72,6 @@ flutter {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+    // 年齢シグナル（米カリフォルニア州 AB 1043・ブラジル Digital ECA。2027-01 から共有が義務）
+    implementation("com.google.android.play:age-signals:0.0.6")
 }

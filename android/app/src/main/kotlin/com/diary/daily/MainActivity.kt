@@ -9,6 +9,8 @@ import io.flutter.plugin.common.MethodChannel
 class MainActivity : FlutterFragmentActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        // Play Age Signals API（年齢シグナル。AgeSignalsChannel.kt 参照）
+        AgeSignalsChannel(this, flutterEngine.dartExecutor.binaryMessenger)
         // アプリロック有効時に FLAG_SECURE を制御
         // （リセントのサムネイル・スクリーンショットから日記本文を守る）
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.diary.daily/secure")
