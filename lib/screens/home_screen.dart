@@ -13,6 +13,7 @@ import '../models/diary_entry.dart';
 import '../services/database_service.dart';
 import '../services/notification_service.dart';
 import '../services/streak_service.dart';
+import '../services/age_signals_service.dart';
 import 'write_screen.dart';
 import 'past_today_screen.dart';
 import 'random_screen.dart';
@@ -134,10 +135,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return prompts[doy % prompts.length];
   }
 
-  void _loadBannerAd() {
+  Future<void> _loadBannerAd() async {
     if (kIsWeb) return;
     // 本番の広告 ID を渡さずに作った release ビルドは広告を出さない（テスト用 ID で出さない）
     if (kReleaseMode && !AppConstants.adMobReleaseIdGiven) return;
+    // 年齢シグナルで未成年と分かったら、広告を読み込む前に AdMob の設定を変える
+    await AgeSignalsService.instance.applyToAds();
+    if (!mounted) return;
     final adUnitId = defaultTargetPlatform == TargetPlatform.android
         ? AppConstants.adMobBannerIdAndroid
         : AppConstants.adMobBannerIdIOS;
