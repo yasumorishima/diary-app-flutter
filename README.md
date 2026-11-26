@@ -38,6 +38,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export via share sheet + in-app backup list (restore / delete) |
 | **Google Drive Backup (Optional)** | Sign in with Google to back up to your own Drive (app-private appDataFolder) — auto backup after save, restore on any device. The developer can never read it |
 | **Screen Reader Support** | Every tappable control is labelled for TalkBack — back, light/dark toggle, month arrows, clear, the mood stickers (announced by name and selection state), and the rest. The save celebration is announced as a live region, number tiles read as one sentence, decorative emoji are excluded, and mood emoji are read as words. `test/a11y_names_test.dart` fails the build if any tappable control ships without a name; a device audit on the CI emulator (`scripts/a11y_device_audit.py`) checks the real accessibility tree the reader receives. Settings carries a short **how to use this with a screen reader** section (where the reading aloud comes from, how to move, and the one thing that cannot be read — the calendar dot). `scripts/a11y_speech_capture.py` records the order and wording a reader actually receives on a device, and `scripts/a11y_tts_measure.py` speaks each label through the device TTS and measures the audio — it runs as a CI gate on every pull request that touches the wording, and it trims the synthesizer's leading and trailing padding before it judges |
+| **Age Signals (Google Play)** | Where the law requires it (e.g. some US states, Brazil), the app asks Google Play's Age Signals API for an age range — only the range, never a birth date or ID. For users under 18 the ads are tagged for under-age users with a lower content rating (under 13: child-directed, rating G). Nothing is sent to the developer, and elsewhere the API is not called |
 | **Kids' Learning Site Link** | Settings links out to the developer's free learning site for kids (arithmetic / shogi / coding). Shown only when the device language is Japanese, because the site is Japanese-only |
 
 ## Tech Stack
@@ -48,7 +49,7 @@ A laid-back, playful diary you can jot in a snap.
 | **State Management** | Provider |
 | **Local Storage** | Hive (NoSQL) |
 | **Cloud Backup** | Google Sign-In (google_sign_in v7) + Google Drive API — `drive.appdata` scope only, user-owned storage |
-| **Monetization** | Google AdMob (non-personalized banner ads) |
+| **Monetization** | Google AdMob (non-personalized banner ads; age-based ad settings from the Play Age Signals API) |
 | **Localization** | Flutter intl (ARB files) |
 | **Architecture** | Single-codebase cross-platform |
 | **Testing** | flutter_test — unit tests for model + Hive database layer |
