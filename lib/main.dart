@@ -4,7 +4,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'package:diary_app/l10n/app_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -33,13 +32,6 @@ void main() async {
   // アダプター登録（program_session は既存データ互換のため残す）
   Hive.registerAdapter(DiaryEntryAdapter());
   Hive.registerAdapter(ProgramSessionAdapter());
-
-  // Google Mobile Ads初期化（Web版ではスキップ）
-  if (!kIsWeb) {
-    if (!kReleaseMode || AppConstants.adMobReleaseIdGiven) {
-      await MobileAds.instance.initialize();
-    }
-  }
 
   // 通知プラグイン初期化（Web版ではスキップ、権限要求はしない）
   await NotificationService.instance.init();

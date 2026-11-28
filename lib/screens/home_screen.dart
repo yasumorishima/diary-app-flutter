@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:diary_app/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../providers/theme_provider.dart';
@@ -34,9 +32,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  BannerAd? _bannerAd;
-  bool _isAdLoaded = false;
-
   int _streak = 0;
   Set<String> _earnedStamps = {};
   String _selectedMood = '';
@@ -46,7 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _loadBannerAd();
+    // 起動時に年齢シグナルを要求する（AB 1043 などの義務。結果はアプリ内で使わない）
+    AgeSignalsService.instance.check();
     _loadHomeData();
     _loadPromptState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -83,7 +79,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
-    _bannerAd?.dispose();
     super.dispose();
   }
 
@@ -133,30 +128,6 @@ class _HomeScreenState extends State<HomeScreen> {
         .inDays;
     final prompts = _prompts(l10n);
     return prompts[doy % prompts.length];
-  }
-
-  Future<void> _loadBannerAd() async {
-    if (kIsWeb) return;
-    // 本番の広告 ID を渡さずに作った release ビルドは広告を出さない（テスト用 ID で出さない）
-    if (kReleaseMode && !AppConstants.adMobReleaseIdGiven) return;
-    // 年齢シグナルで未成年と分かったら、広告を読み込む前に AdMob の設定を変える
-    await AgeSignalsService.instance.applyToAds();
-    if (!mounted) return;
-    final adUnitId = defaultTargetPlatform == TargetPlatform.android
-        ? AppConstants.adMobBannerIdAndroid
-        : AppConstants.adMobBannerIdIOS;
-    _bannerAd = BannerAd(
-      adUnitId: adUnitId,
-      size: AdSize.banner,
-      request: const AdRequest(nonPersonalizedAds: true),
-      listener: BannerAdListener(
-        onAdLoaded: (_) {
-          if (mounted) setState(() => _isAdLoaded = true);
-        },
-        onAdFailedToLoad: (ad, error) => ad.dispose(),
-      ),
-    );
-    _bannerAd?.load();
   }
 
   Future<void> _openWrite() async {
@@ -232,14 +203,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          if (_isAdLoaded && _bannerAd != null)
-            Container(
-              alignment: Alignment.center,
-              width: _bannerAd!.size.width.toDouble(),
-              height: _bannerAd!.size.height.toDouble(),
-              margin: const EdgeInsets.symmetric(vertical: 8),
-              child: AdWidget(ad: _bannerAd!),
-            ),
         ],
       ),
     );
