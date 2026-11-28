@@ -38,7 +38,7 @@ A laid-back, playful diary you can jot in a snap.
 | **Data Backup** | Android Auto Backup + device-transfer enabled, JSON export via share sheet + in-app backup list (restore / delete) |
 | **Google Drive Backup (Optional)** | Sign in with Google to back up to your own Drive (app-private appDataFolder) — auto backup after save, restore on any device. The developer can never read it |
 | **Screen Reader Support** | Every tappable control is labelled for TalkBack — back, light/dark toggle, month arrows, clear, the mood stickers (announced by name and selection state), and the rest. The save celebration is announced as a live region, number tiles read as one sentence, decorative emoji are excluded, and mood emoji are read as words. `test/a11y_names_test.dart` fails the build if any tappable control ships without a name; a device audit on the CI emulator (`scripts/a11y_device_audit.py`) checks the real accessibility tree the reader receives. Settings carries a short **how to use this with a screen reader** section (where the reading aloud comes from, how to move, and the one thing that cannot be read — the calendar dot). `scripts/a11y_speech_capture.py` records the order and wording a reader actually receives on a device, and `scripts/a11y_tts_measure.py` speaks each label through the device TTS and measures the audio — it runs as a CI gate on every pull request that touches the wording, and it trims the synthesizer's leading and trailing padding before it judges |
-| **Age Signals (Google Play)** | Where the law requires it (e.g. some US states, Brazil), the app asks Google Play's Age Signals API for an age range — only the range, never a birth date or ID. For users under 18 the ads are tagged for under-age users with a lower content rating (under 13: child-directed, rating G). Nothing is sent to the developer, and elsewhere the API is not called |
+| **Age Signals (Google Play)** | Where the law requires it (e.g. some US states, Brazil), the app asks Google Play's Age Signals API for an age range — only the range, never a birth date or ID. The app has no ads or other age-dependent features, so the range is not used, stored or sent anywhere, and elsewhere the API is not called |
 | **Kids' Learning Site Link** | Settings links out to the developer's free learning site for kids (arithmetic / shogi / coding). Shown only when the device language is Japanese, because the site is Japanese-only |
 
 ## Tech Stack
@@ -49,7 +49,7 @@ A laid-back, playful diary you can jot in a snap.
 | **State Management** | Provider |
 | **Local Storage** | Hive (NoSQL) |
 | **Cloud Backup** | Google Sign-In (google_sign_in v7) + Google Drive API — `drive.appdata` scope only, user-owned storage |
-| **Monetization** | Google AdMob (non-personalized banner ads; age-based ad settings from the Play Age Signals API) |
+| **Monetization** | None — no ads and no in-app purchases (AdMob was removed in v1.0.44) |
 | **Localization** | Flutter intl (ARB files) |
 | **Architecture** | Single-codebase cross-platform |
 | **Testing** | flutter_test — unit tests for model + Hive database layer |
@@ -97,14 +97,12 @@ The Flutter version adds offline capability, native performance, and multi-langu
 | **This repository** (public) | The app source, the tests and the CI that checks every change |
 | [daily-diary](https://github.com/yasumorishima/daily-diary) 🔒 *(private)* | The store listing and screenshots, and the design notes and history up to v1.0.42 |
 
-The production AdMob IDs are not in this repository's source: they are Secrets of the `production` environment, used only by the release workflow. Other builds use Google's test ad IDs, and a release build made without the production IDs shows no ads.
-
 ## CI/CD
 
 GitHub Actions in this repository:
 
 - **Flutter CI** (`flutter-ci.yml`): `flutter analyze` + `flutter test` + a debug APK build on every push and pull request to `main` (and on pushes to `ccr-**` cloud-session branches), and a check that `pubspec.lock` is up to date
-- **Release** (`release.yml`): when a push to `main` carries a `pubspec.yaml` version that has no `v<version>` tag yet (i.e. a version-bump PR is merged), builds the signed release AAB, checks that it carries the production AdMob IDs and the upload-key signature (`scripts/build_release.sh`), publishes it to Google Play production and tags `v<version>`. A manual run with `publish` off does the same build and checks without publishing. Signing keys, the service account and the AdMob IDs are Secrets of the `production` environment, which only `main` can use
+- **Release** (`release.yml`): when a push to `main` carries a `pubspec.yaml` version that has no `v<version>` tag yet (i.e. a version-bump PR is merged), builds the signed release AAB, checks that no AdMob is left in it and that it carries the upload-key signature (`scripts/build_release.sh`), publishes it to Google Play production and tags `v<version>`. A manual run with `publish` off does the same build and checks without publishing. Signing keys and the service account are Secrets of the `production` environment, which only `main` can use
 - **Integration Test** (`integration-test.yml`): Android emulator (API 34, KVM) — a device audit of every screen (each tappable control must have a name), home screenshots in three themes/languages, and the E2E flow (mood sticker → write & save → save celebration → stamp collection)
 - **A11y TTS measure** (`a11y-tts.yml`): on pull requests that change the strings or the probe, the emulator's TTS reads the screen-reader strings and the audio is measured (TalkBack itself is not in the emulator image)
 - **A11y speech capture** (`a11y-speech.yml`): manual dispatch → collects what a screen reader would receive (order, text, live-region events) through a profile-only accessibility service
@@ -123,7 +121,7 @@ The store listing and screenshot updates run from the private repository.
 
 - All diary entries are stored locally on your device by default — nothing leaves your device unless you opt in
 - Optional Google Drive backup (v1.0.27+) stores your diary only in your own Google Drive (app-private area, `drive.appdata` scope) — the developer has no server and can never read or collect your diary
-- Ads are served via Google AdMob (non-personalized); like most ad SDKs it collects an advertising ID and approximate (IP-based) location — see the Privacy Policy
+- No ads and no ad SDK (since v1.0.44), so no advertising ID is collected
 - [Privacy Policy](https://yasumorishima.github.io/diary-app-flutter-privacy/)
 
 ---

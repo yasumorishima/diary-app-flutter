@@ -19,7 +19,7 @@ import io.flutter.plugin.common.MethodChannel
  * それ以外のユーザーには Play のプロンプトを出さない。
  *
  * 結果は Map で返し、失敗しても例外にはしない（年齢シグナルが取れなくてもアプリは普通に動く）。
- * 受け取った年齢帯は端末内で広告の設定に使うだけで、どこにも送らない。installId も使わない。
+ * 受け取った年齢帯はアプリで使わず、どこにも送らない。installId も使わない。
  */
 class AgeSignalsChannel(private val activity: Activity, messenger: BinaryMessenger) {
 

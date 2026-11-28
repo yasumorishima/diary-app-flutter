@@ -1,6 +1,6 @@
 name: diary_app
 description: 連用日記 - Flutter版スマホアプリ
-version: 1.0.43+43
+version: 1.0.44+44
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -30,9 +30,6 @@ dependencies:
   # UI
   intl: ^0.20.3  # 日付フォーマット（flutter_localizations の要求に追従）
   table_calendar: ^3.0.9  # カレンダーウィジェット
-
-  # 広告
-  google_mobile_ads: ^9.0.0
 
   # レビュー依頼（In-App Review API）
   in_app_review: ^2.0.9

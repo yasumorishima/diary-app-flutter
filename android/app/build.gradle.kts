@@ -36,10 +36,6 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        // AdMob のアプリ ID。本番の値はこの公開リポジトリに置かず、非公開の daily-diary の
-        // android-build.yml が環境変数 ORG_GRADLE_PROJECT_admobAppId で渡す。未指定は Google のテスト用
-        manifestPlaceholders["admobAppId"] =
-            (project.findProperty("admobAppId") as String?) ?: "ca-app-pub-3940256099942544~3347511713"
     }
 
     signingConfigs {

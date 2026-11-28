@@ -68,15 +68,4 @@ class AppConstants {
 
   // アニメーション
   static const Duration animationDuration = Duration(milliseconds: 300);
-
-  // 広告。本番の ID はこの公開リポジトリに置かない。リリースは非公開の daily-diary の
-  // android-build.yml が --dart-define=ADMOB_BANNER_ANDROID=... で渡す。
-  // 渡されていないときは Google のテスト用 ID（debug / profile）で、release ビルドでは広告を出さない。
-  static const String _adMobBannerIdAndroidRelease =
-      String.fromEnvironment('ADMOB_BANNER_ANDROID');
-  static const bool adMobReleaseIdGiven = _adMobBannerIdAndroidRelease != '';
-  static const String adMobBannerIdAndroid = adMobReleaseIdGiven
-      ? _adMobBannerIdAndroidRelease
-      : 'ca-app-pub-3940256099942544/6300978111'; // Google のテスト用
-  static const String adMobBannerIdIOS = 'ca-app-pub-3940256099942544/2934735716';  // テスト用
 }

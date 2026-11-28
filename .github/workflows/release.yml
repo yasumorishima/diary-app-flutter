@@ -12,7 +12,7 @@ name: Release
 # タグで起動しないのは、Claude Code のクラウドセッションからはタグを push できないため
 # （作業ブランチへの push しか通らない）。PR のマージなら、そこから完結する。
 #
-# 署名の鍵・サービスアカウント・本番の AdMob ID は "production" 環境の Secrets にだけ置く。
+# 署名の鍵・サービスアカウントは "production" 環境の Secrets にだけ置く。
 # この環境は main からしか使えないようにしてある。main はルールセットで直接の push を止め、
 # PR のマージ（と Admin）だけにしてある。PR（fork を含む）やほかのブランチからは Secrets に届かない。
 # ログは公開されるので、Secrets は表に出さない。
@@ -131,8 +131,6 @@ jobs:
           STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
-          ADMOB_BANNER_ANDROID: ${{ secrets.ADMOB_BANNER_ANDROID }}
         run: bash scripts/build_release.sh
 
       - name: Publish to Google Play (production)
